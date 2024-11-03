@@ -105,14 +105,14 @@ class RecipeListViewController: UIViewController, UICollectionViewDataSource, UI
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width,height: collectionView.frame.height/3) // Высота ячейки
+        return CGSize(width: collectionView.frame.width,height: collectionView.frame.height/3) 
     }
     func reloadRecipes() {
             loadRecipes()
            collectionView.reloadData()
        }
 
-       // Передача делегата при переходе к AddRecipeController
+      
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if let addRecipeVC = segue.destination as? AddRecipeController {
                addRecipeVC.delegate = self

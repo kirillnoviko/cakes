@@ -12,7 +12,7 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
     var coordinator: AppCoordinator?
     var selectedCakes: [Cake] = []
         
-    var selectedDate: Date? // для выбранной даты
+    var selectedDate: Date?
     var selectedTime: String?
     
     @IBOutlet weak var stackEnterName: UIStackView!
@@ -26,7 +26,9 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
     @IBOutlet weak var stackSelectDate: UIStackView!
     @IBOutlet weak var stackClock: UIStackView!
     @IBOutlet weak var dateButton: UIButton!
-    // Переменные для хранения выбранной страны и адреса
+    
+    
+    
     @IBOutlet weak var clock1: UIButton!
     @IBOutlet weak var clock2: UIButton!
     @IBOutlet weak var clock3: UIButton!
@@ -138,7 +140,8 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
  
         scrollView.layoutIfNeeded()
         
-  
+        textFieldEnterName.delegate = self
+        
         if let contentView = scrollView.subviews.first {
             scrollView.contentSize = CGSize(width: scrollView.frame.width, height: contentView.frame.height)
         }
@@ -221,6 +224,10 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
         view.endEditing(true)
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+        }
     
 
         @IBAction func dateButtonTapped(_ sender: UIButton) {
@@ -248,7 +255,7 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
     }
 
     private func updateSelectedTimeButton(_ selectedButton: UIButton) {
-        // Сбрасываем состояние всех кнопок времени
+      
         [clock1, clock2, clock3].forEach { button in
             button?.isSelected = (button == selectedButton)
         }
@@ -276,7 +283,7 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
            button.setBackgroundImage(UIImage(named: imageName), for: .normal)
        }
     
-    // MARK: - Действия для кнопок стран
+ 
     
     @IBAction func canadaButtonTapped(_ sender: UIButton) {
         toggleTableView(for: "Canada", sender: sender)
@@ -291,23 +298,34 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
     }
     
     func toggleTableView(for country: String, sender: UIButton) {
-  
         let buttonsAndTables: [(UIButton, UITableView)] = [
             (canadaButton, canadaTableView),
             (germanyButton, germanyTableView),
             (greatBritainButton, greatBritainTableView)
         ]
+        
+        var isExpandingCurrentCountry = false
+        
+      
+        if selectedCountry == country {
+            isExpandingCurrentCountry = true
+        }
 
         for (button, tableView) in buttonsAndTables {
             tableView.isHidden = true
             updateCountryButtonAppearance(button, isExpanded: false)
         }
-        
+
      
+        if isExpandingCurrentCountry {
+            selectedCountry = nil
+            return
+        }
+  
         selectedCountry = country
         selectedAddress = nil
-        
 
+ 
         var isExpanded = false
         switch country {
         case "Canada":
@@ -325,10 +343,11 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
         default:
             break
         }
-        
-  
+
+       
         updateCountryButtonAppearance(sender, isExpanded: isExpanded)
     }
+
 
     
     // MARK: - UITableViewDataSource Methods
@@ -354,7 +373,7 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
 //    // MARK: - UITableViewDelegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Выбрана строка: \(indexPath.row) в таблице: \(tableView)")
+        print("selected row: \(indexPath.row) in table: \(tableView)")
 
         let country = selectedCountry ?? ""
         let addresses = addressesByCountry[country] ?? []
@@ -373,10 +392,11 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CakeCell", for: indexPath) as! CakeCell
             let cake = selectedCakes[indexPath.item]
             cell.configure(with: cake)
+            cell.disableButton()
             return cell
         }
         
-        // Настройка размеров ячейки (по аналогии с OrderCakesController)
+     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            let padding: CGFloat = 10
            let totalPadding = padding * 2
@@ -396,7 +416,7 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
            return CGSize(width: cellWidth, height: cellHeight)
        }
  
-    // Вспомогательная функция для получения кнопки по названию страны
+
     func getButton(for country: String) -> UIButton? {
         switch country {
         case "Canada":
@@ -410,15 +430,34 @@ class OrderPlaceController: UIViewController,  UITableViewDelegate, UITableViewD
         }
     }
     @IBAction func placeOrderButtonTapped(_ sender: UIButton) {
-        guard let name = textFieldEnterName.text, !name.isEmpty,
-                    let date = selectedDate,
-                    let time = selectedTime else {
-                  showAlertWithMessage("Please enter your name, select a date, and choose a time.")
-                  return
-              }
-              
-              saveOrder(name: name, date: date, time: time)
+        guard let name = textFieldEnterName.text, !name.isEmpty else {
+            showAlertWithMessage("Please enter your name.")
+            return
+        }
+        
+        guard let selectedCountry = selectedCountry, !selectedCountry.isEmpty else {
+            showAlertWithMessage("Please select a country.")
+            return
+        }
+        
+        guard let selectedAddress = selectedAddress, !selectedAddress.isEmpty else {
+            showAlertWithMessage("Please select an address.")
+            return
+        }
+        
+        guard let date = selectedDate else {
+            showAlertWithMessage("Please select a date.")
+            return
+        }
+        
+        guard let time = selectedTime else {
+            showAlertWithMessage("Please choose a time.")
+            return
+        }
+        
+        saveOrder(name: name, date: date, time: time)
     }
+
     private func showAlertWithMessage(_ message: String) {
          let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
          alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -462,20 +501,19 @@ extension OrderPlaceController: CalendarModalDelegate {
         
         stackClock.isHidden = false
 
-        // Проверяем наличие заказов по выбранной дате и адресу
+        
         checkExistingOrders(for: date, at: selectedAddress)
     }
 
     private func checkExistingOrders(for date: Date, at address: String?) {
         guard let address = address else {
-            // Если адрес не выбран, включаем все кнопки времени
+            
             enableAllTimeButtons()
             return
         }
         
         let fetchRequest: NSFetchRequest<Order> = Order.fetchRequest()
         
-        // Устанавливаем диапазон для поиска записей на выбранную дату (начало и конец дня)
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: date)
         var components = DateComponents()
@@ -483,13 +521,13 @@ extension OrderPlaceController: CalendarModalDelegate {
         components.second = -1
         let endOfDay = calendar.date(byAdding: components, to: startOfDay)
 
-        // Фильтр по дате и адресу
+
         fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date <= %@ AND address == %@", startOfDay as NSDate, endOfDay! as NSDate, address)
 
         do {
             let existingOrders = try context.fetch(fetchRequest)
             if !existingOrders.isEmpty {
-                // Если есть заказы на выбранную дату и адрес, отключаем время
+           
                 disableTimeButtons(for: existingOrders)
             } else {
                 enableAllTimeButtons()

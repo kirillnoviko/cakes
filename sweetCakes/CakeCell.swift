@@ -34,7 +34,11 @@ class CakeCell: UICollectionViewCell {
         incrementButton.isHidden = cake.quantity == 0
         decrementButton.isHidden = cake.quantity == 0
     }
-    
+    func disableButton(){
+        incrementButton.isHidden = true
+        decrementButton.isHidden = true
+    }
+   
     @IBAction func addButtonPressed(_ sender: UIButton) {
         addButtonTapped?()
     }

@@ -12,7 +12,7 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
         
         view.backgroundColor = .black
         
-        // Настраиваем сеанс захвата
+       
         captureSession = AVCaptureSession()
         
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
@@ -35,42 +35,42 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
             return
         }
         
-        // Настраиваем вывод метаданных для распознавания QR-кодов
+        
         let metadataOutput = AVCaptureMetadataOutput()
         
         if (captureSession.canAddOutput(metadataOutput)) {
             captureSession.addOutput(metadataOutput)
             
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.qr] // Устанавливаем тип для QR-кодов
+            metadataOutput.metadataObjectTypes = [.qr]
         } else {
             showError()
             return
         }
         
-        // Настраиваем превью слоя с захватом
+    
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
         
-        // Настраиваем кнопку закрытия
+
         setupCloseButton()
         
-        // Запускаем сеанс захвата
+
         captureSession.startRunning()
     }
     
-    // MARK: - Настройка кнопки закрытия
+    // MARK: -
     private func setupCloseButton() {
         closeButton = UIButton(type: .system)
-        closeButton.setTitle("Закрыть", for: .normal)
+        closeButton.setTitle("close", for: .normal)
         closeButton.setTitleColor(.white, for: .normal)
         closeButton.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         closeButton.layer.cornerRadius = 10
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         
-        // Позиция кнопки
+       
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(closeButton)
         
@@ -83,20 +83,23 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     }
     
     @objc private func closeButtonTapped() {
-        dismiss(animated: true, completion: nil)
-    }
+        if let navigationController = self.navigationController {
+            navigationController.popToRootViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }    }
     
-    // MARK: - Обработка распознанного QR-кода
+   
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        // Останавливаем захват, как только что-то найдено
+        
         captureSession.stopRunning()
         
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject,
                   readableObject.type == .qr else { return }
             
-            // Вибрация и сообщение
+            
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             showNotFoundAlert()
         }
@@ -104,17 +107,17 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     
     // MARK: - Вспомогательные методы
     
-    // Сообщение о том, что QR-код не найден
+   
     private func showNotFoundAlert() {
-        let alert = UIAlertController(title: "QR-код не найден", message: "Попробуйте другой QR-код", preferredStyle: .alert)
+        let alert = UIAlertController(title: "QR code not found", message: "Try a different QR code", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.captureSession.startRunning() // Возобновить захват после закрытия алерта
+            self.captureSession.startRunning()
         }))
         present(alert, animated: true, completion: nil)
     }
     
     private func showError() {
-        let alert = UIAlertController(title: "Ошибка", message: "Не удалось настроить камеру для сканирования QR-кодов", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "Failed to set up camera to scan QR codes", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
             self.dismiss(animated: true, completion: nil)
         }))
@@ -122,7 +125,7 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
         captureSession = nil
     }
     
-    // Остановка захвата, если контроллер закрывается
+   
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         

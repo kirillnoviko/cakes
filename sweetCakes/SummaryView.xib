@@ -77,22 +77,22 @@
                             <rect key="frame" x="0.0" y="0.0" width="342" height="367"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X3i-DM-9WD">
-                            <rect key="frame" x="73" y="15" width="196" height="257"/>
+                            <rect key="frame" x="37" y="15" width="268" height="257"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-RY-u5S">
-                                    <rect key="frame" x="0.0" y="0.0" width="196" height="124.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="268" height="124.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-zb-b8r">
-                                            <rect key="frame" x="0.0" y="0.0" width="93" height="124.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="129" height="124.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-pd-3t1">
-                                                    <rect key="frame" x="28.5" y="0.0" width="36.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brownie shape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-pd-3t1">
+                                                    <rect key="frame" x="14.5" y="0.0" width="100" height="21"/>
                                                     <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dK0-fI-8br">
-                                                    <rect key="frame" x="0.0" y="26" width="93" height="98.5"/>
+                                                    <rect key="frame" x="18" y="26" width="93" height="98.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -100,16 +100,16 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2wC-D4-fzd">
-                                            <rect key="frame" x="103" y="0.0" width="93" height="124.5"/>
+                                            <rect key="frame" x="139" y="0.0" width="129" height="124.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-F7-bC7">
-                                                    <rect key="frame" x="28.5" y="0.0" width="36.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cream for brownie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-F7-bC7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="129" height="21"/>
                                                     <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UgL-Sj-LvI">
-                                                    <rect key="frame" x="0.0" y="26" width="93" height="98.5"/>
+                                                    <rect key="frame" x="18" y="26" width="93" height="98.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -119,16 +119,16 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i5e-Fn-pOa">
-                                    <rect key="frame" x="0.0" y="132.5" width="95" height="124.5"/>
+                                    <rect key="frame" x="0.0" y="132.5" width="154.5" height="124.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgk-jY-rBM">
-                                            <rect key="frame" x="29" y="0.0" width="36.5" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sprinkles for brownie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgk-jY-rBM">
+                                            <rect key="frame" x="0.0" y="0.0" width="154.5" height="15.5"/>
                                             <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KSN-nx-0ge">
-                                            <rect key="frame" x="0.0" y="25.5" width="95" height="99"/>
+                                            <rect key="frame" x="30" y="20.5" width="94.5" height="104"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>

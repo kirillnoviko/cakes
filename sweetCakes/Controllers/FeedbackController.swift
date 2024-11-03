@@ -81,7 +81,7 @@ class FeedbackController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         coordinator?.goBack()
     }
 
-    // Проверка на заполнение всех обязательных полей и формат email
+
     func validateFields() -> Bool {
         var missingFields = [String]()
         

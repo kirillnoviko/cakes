@@ -31,7 +31,7 @@ class RecipeDetailViewController: UIViewController, UICollectionViewDataSource, 
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
         
-        descriptionTextView.layer.cornerRadius = 13 // Замените 10 на нужное значение для скругления
+        descriptionTextView.layer.cornerRadius = 13
         descriptionTextView.layer.masksToBounds = true
         titleTextField.isUserInteractionEnabled = false
         descriptionTextView.isUserInteractionEnabled = false
@@ -48,7 +48,7 @@ class RecipeDetailViewController: UIViewController, UICollectionViewDataSource, 
         titleTextField.text = recipe.name
         descriptionTextView.text = recipe.instructions
         
-        // Десериализуем изображения асинхронно
+        
         if let imageData = recipe.imagesData {
             DispatchQueue.global(qos: .background).async {
                 if let imageDataArray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(imageData) as? [Data] {

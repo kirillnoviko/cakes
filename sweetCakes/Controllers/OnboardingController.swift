@@ -13,11 +13,11 @@ class OnboardingController: UIViewController {
     @IBOutlet weak var buttonBack: UIButton!
     
     var isCallMenu: Bool!
-    var currentPage = 0 // Хранит текущую страницу (0 - первый слайд, 1 - второй слайд)
+    var currentPage = 0 
     
-    let onboardingImages = ["Onboarding1", "Onboarding2"] // Названия картинок для слайдов
-    let abouteTextButton = ["Next", "back to menu"] // Названия картинок для слайдов
-    let onboardingTextButton = ["Next", "I’m ready"] // Названия картинок для слайдов
+    let onboardingImages = ["Onboarding1", "Onboarding2"]
+    let abouteTextButton = ["Next", "back to menu"]
+    let onboardingTextButton = ["Next", "I’m ready"]
    
     override func viewDidLoad() {
         buttonBack.isHidden = true
@@ -37,7 +37,7 @@ class OnboardingController: UIViewController {
     @IBAction func goBack(_ sender: UIButton) {
         if currentPage == 1 {
             
-            // Переход на следующий слайд
+          
             currentPage -= 1
             updateUI()
         } else {
@@ -53,7 +53,7 @@ class OnboardingController: UIViewController {
         
             if currentPage < onboardingImages.count - 1 {
                 
-                // Переход на следующий слайд
+         
                 currentPage += 1
                 updateUI()
             } else {
@@ -69,7 +69,7 @@ class OnboardingController: UIViewController {
       
     }
     
-    // Функция обновления UI для текущего слайда
+  
     func updateUI() {
         imageView.image = UIImage(named: onboardingImages[currentPage])
         labelSkip.isHidden = true

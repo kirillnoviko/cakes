@@ -9,7 +9,6 @@ class SummaryView: UIView {
     @IBOutlet weak var imageSprinkle: UIImageView!
     @IBOutlet weak var labelfilling: UILabel!
     @IBOutlet weak var labelbatter: UILabel!
-    
     @IBOutlet weak var constraintWidth: NSLayoutConstraint!
     
     override func awakeFromNib() {
@@ -28,13 +27,11 @@ class SummaryView: UIView {
         labelbatter.text = "Brownie batter: \(batter)"
         labelfilling.text = "Brownie filling: \(filling)"
     }
-    
-    // Действие для кнопки "Добавить в рецепты"
+
     @IBAction func addToRecipesTapped(_ sender: UIButton) {
         onSave?()
     }
     
-    // Действие для кнопки "Try Again"
     @IBAction func tryAgainTapped(_ sender: UIButton) {
         onTryAgain?()
     }

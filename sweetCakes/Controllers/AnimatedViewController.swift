@@ -4,10 +4,10 @@ import UIKit
 
 class AnimatedViewController: UIViewController {
 
-    @IBOutlet weak var animatedImageView: UIImageView!  // Картинка для анимации
-    @IBOutlet weak var promptLabel: UILabel!            // Лейбл, который появится после анимации
+    @IBOutlet weak var animatedImageView: UIImageView!  
+    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var selectionContainerView: UIView!
-    @IBOutlet weak var imageHorizontalConstraint: NSLayoutConstraint! // Подключенный констрейнт
+    @IBOutlet weak var imageHorizontalConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var constaraintWidth: NSLayoutConstraint!
     
@@ -22,17 +22,17 @@ class AnimatedViewController: UIViewController {
     
     @IBOutlet weak var imageVerticalContstraint: NSLayoutConstraint!
     var coordinator: AppCoordinator?
-    var selectedShapeImage: UIImage?   // Для сохранения выбранной формы
-    var selectedCreamImage: UIImage?   // Для сохранения крема
+    var selectedShapeImage: UIImage?
+    var selectedCreamImage: UIImage?
     @IBOutlet weak var viewLabel: UIView!
-    var selectedSprinkleImage: UIImage? // Для сохранения посыпки
-    var selectedBatter: String?          // Для сохранения теста
-    var selectedFilling: String?        // Для сохранения начинки
+    var selectedSprinkleImage: UIImage?
+    var selectedBatter: String?
+    var selectedFilling: String?        
     private var stepHistory: [SelectionStep] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        selectionContainerView.isHidden = true // Прячем контейнер для выбора
+        selectionContainerView.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -54,22 +54,20 @@ class AnimatedViewController: UIViewController {
             imageVerticalContstraint.constant = 183
         }
         self.view.layoutIfNeeded()
-      // Прячем лейбл
-            selectionContainerView.isHidden = true // Прячем контейнер для выбора
+            selectionContainerView.isHidden = true
             animateImageToCenter()
-            // Включите взаимодействие с пользователем для animatedImageView
+
             animatedImageView.isUserInteractionEnabled = true
-            
-            // Добавьте распознаватель нажатий
+          
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
             animatedImageView.addGestureRecognizer(tapGesture)
        
     }
   
     @IBAction func backButtonTapped(_ sender: UIButton) {
-          if let lastStep = stepHistory.popLast() { // Удалить последний шаг из истории
+          if let lastStep = stepHistory.popLast() {
               if stepHistory.isEmpty {
-                  coordinator?.goBack() // Закрываем контроллер на первом экране
+                  coordinator?.goBack()
               } else {
                   showSelectionView(step: stepHistory.last!)
               }
@@ -92,10 +90,10 @@ class AnimatedViewController: UIViewController {
         imageHorizontalConstraint.constant = view.bounds.width / 2.5
             
             UIView.animate(withDuration: 3.0, animations: {
-                self.view.layoutIfNeeded() // Обновляем компоновку с анимацией
+                self.view.layoutIfNeeded()
             }) { _ in
                 UIView.animate(withDuration: 1) {
-                    self.viewLabel.isHidden = false// Показываем лейбл после анимации изображения
+                    self.viewLabel.isHidden = false
                 }
             }
     }
@@ -125,36 +123,25 @@ extension AnimatedViewController {
             loadCreamSelectionView()
         case .sprinkleSelection:
             loadSprinkleSelectionView()
-     
         case .summary:
             loadSummaryView()
     
-//        case .creamSelection:
-//            return
-//        case .sprinkleSelection:
-//            return
-//        case .batterSelection:
-//            return
-//        case .fillingSelection:
-//            return
-//        case .summary:
-//            return
         }
     }
     
     func loadShapeSelectionView() {
-        // Загрузите XIB с выбором формы и настройте кнопки выбора формы
+        
         guard let shapeView = Bundle.main.loadNibNamed("ShapeView", owner: self, options: nil)?.first as? ShapeSelectionView else {
                  return
              }
 
-             // Настраиваем замыкание для передачи выбранной формы
+      
              shapeView.onShapeSelected = { [weak self] selectedImage in
                  self?.selectedShapeImage = selectedImage
                  self?.showSelectionView(step: .batterSelection)
              }
 
-             // Добавляем `ShapeSelectionView` в контейнер
+         
              presentInContainer(shapeView)
     }
     
@@ -163,13 +150,13 @@ extension AnimatedViewController {
                  return
              }
 
-             // Настраиваем замыкание для передачи выбранной формы
+         
              shapeView.onBatterSelected = { [weak self] selectedImage in
                  self?.selectedBatter = selectedImage
                  self?.showSelectionView(step: .fillingSelection)
              }
 
-             // Добавляем `ShapeSelectionView` в контейнер
+         
              presentInContainer(shapeView)
     }
     
@@ -178,13 +165,13 @@ extension AnimatedViewController {
                  return
              }
 
-             // Настраиваем замыкание для передачи выбранной формы
+             
              shapeView.onFillingSelected = { [weak self] selectedImage in
                  self?.selectedFilling = selectedImage
                  self?.showSelectionView(step: .creamSelection)
              }
 
-             // Добавляем `ShapeSelectionView` в контейнер
+             
              presentInContainer(shapeView)
     }
     
@@ -193,35 +180,28 @@ extension AnimatedViewController {
                  return
              }
 
-             // Настраиваем замыкание для передачи выбранной формы
+            
              shapeView.onCreamSelected = { [weak self] selectedImage in
                  self?.selectedCreamImage = selectedImage
                  self?.showSelectionView(step: .sprinkleSelection)
              }
 
-             // Добавляем `ShapeSelectionView` в контейнер
+           
              presentInContainer(shapeView)
     }
-//
-//    
-
-//    
-
-//    
-//    
+ 
     func loadSprinkleSelectionView() {
         guard let shapeView = Bundle.main.loadNibNamed("SprinkleView", owner: self, options: nil)?.first as? SprinkleSelectionView else {
                 print("sdfsdf")
                  return
              }
 
-             // Настраиваем замыкание для передачи выбранной формы
              shapeView.onSprinkleSelected = { [weak self] selectedImage in
                  self?.selectedSprinkleImage = selectedImage
                  self?.showSelectionView(step: .summary)
              }
 
-             // Добавляем `ShapeSelectionView` в контейнер
+             
              presentInContainer(shapeView)
     }
 //    
@@ -251,21 +231,21 @@ extension AnimatedViewController {
               }
               
               summaryView.onTryAgain = { [weak self] in
-                  self?.showSelectionView(step: .shapeSelection) // Очищает стек и возвращает на первый экран
+                  self?.showSelectionView(step: .shapeSelection)
               }
         presentInContainer(summaryView)
     }
 }
 extension AnimatedViewController {
     func presentInContainer(_ view: UIView) {
-        // Удаляем предыдущие представления из контейнера
+       
         selectionContainerView.subviews.forEach { $0.removeFromSuperview() }
         
-        // Добавляем новое представление
+        
         view.frame = selectionContainerView.bounds
         selectionContainerView.addSubview(view)
         
-        // Устанавливаем ограничения
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             view.leadingAnchor.constraint(equalTo: selectionContainerView.leadingAnchor),
@@ -283,16 +263,16 @@ extension AnimatedViewController {
         let recipe = Recipe(context: context)
         recipe.name = "Custom Recipe"
         
-        // Собираем изображения для сохранения
+        
         var images: [UIImage] = []
         if let shapeImage = selectedShapeImage { images.append(shapeImage) }
         if let creamImage = selectedCreamImage { images.append(creamImage) }
         if let sprinkleImage = selectedSprinkleImage { images.append(sprinkleImage) }
         
-        // Преобразование всех изображений в `Data`
+     
         let imageDataArray = images.compactMap { $0.pngData() }
         
-        // Сериализация массива `Data` в одно `Data` для хранения
+  
         do {
             let serializedImagesData = try NSKeyedArchiver.archivedData(withRootObject: imageDataArray, requiringSecureCoding: false)
             recipe.imagesData = serializedImagesData
@@ -301,10 +281,9 @@ extension AnimatedViewController {
             return
         }
 
-        // Генерируем и сохраняем инструкции
         recipe.instructions = generateInstructions()
         
-        // Сохранение рецепта
+        
         do {
             try context.save()
             print("Recipe saved successfully!")

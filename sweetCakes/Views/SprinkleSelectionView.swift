@@ -16,15 +16,15 @@ class SprinkleSelectionView: UIView {
         cake1.setBackgroundImage(UIImage(named: "cakeSprinkle1"), for: .normal)
         cake2.setBackgroundImage(UIImage(named: "cakeSprinkle3"), for: .normal)
         cake3.setBackgroundImage(UIImage(named: "cakeSprinkle5"), for: .normal)
-        cake4.setBackgroundImage(UIImage(named: "cakeSprinkle2"), for: .normal)
-        cake5.setBackgroundImage(UIImage(named: "cakeSprinkle4"), for: .normal)
-        cake6.setBackgroundImage(UIImage(named: "cakeSprinkle6"), for: .normal)
+        cake4.setBackgroundImage(UIImage(named: "cakeSprinkle4"), for: .normal)
+        cake5.setBackgroundImage(UIImage(named: "cakeSprinkle6"), for: .normal)
+        cake6.setBackgroundImage(UIImage(named: "cakeSprinkle2"), for: .normal)
        
        
     }
     
     @IBAction func SprinkleButtonTapped(_ sender: UIButton) {
-        sender.setBackgroundImage(UIImage(named: "cake1"), for: .normal)
+       
         if let selectedImage = sender.currentBackgroundImage {
             onSprinkleSelected?(selectedImage)
         }

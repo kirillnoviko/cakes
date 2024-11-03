@@ -98,25 +98,25 @@ class MyOrderCell: UICollectionViewCell {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
         
-        // Форматтер для времени (строки в формате "1:00 AM")
+       
         let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "h:mm a" // Формат времени из строки
+        timeFormatter.dateFormat = "h:mm a"
 
-        // Проверка наличия даты и времени
+       
         if let deliveryDate = order.date, let deliveryTimeString = order.time,
            let deliveryTime = timeFormatter.date(from: deliveryTimeString) {
             
-            // Объединяем дату и время в одну дату-время
+           
             var calendar = Calendar.current
             let deliveryDateTime = calendar.date(bySettingHour: calendar.component(.hour, from: deliveryTime),
                                                  minute: calendar.component(.minute, from: deliveryTime),
                                                  second: 0,
                                                  of: deliveryDate) ?? deliveryDate
 
-            // Устанавливаем текст доставки
+           
             deliveryTimeLabel.text =  (dateFormatter.string(from: deliveryDateTime))
             
-            // Проверка на доставку, сравниваем с текущим временем
+         
             if deliveryDateTime < Date() {
                 statusLabel.text = "Completed"
                 statusLabel.textColor = .green

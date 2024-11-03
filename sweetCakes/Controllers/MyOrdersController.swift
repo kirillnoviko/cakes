@@ -71,13 +71,31 @@ class MyOrdersController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func cancelOrder(_ order: Order) {
-        context.delete(order)
         
-        do {
-            try context.save()
-            fetchOrders()
-        } catch {
-            print("failed: \(error)")
+        let alert = UIAlertController(title: "Are you sure?", message: "Do you want to cancel this order?", preferredStyle: .alert)
+        
+       
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
+           
+            self?.context.delete(order)
+            
+            do {
+                try self?.context.save()
+                self?.fetchOrders()
+            } catch {
+                print("Failed to delete order: \(error)")
+            }
         }
+        
+      
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+  
+        alert.addAction(yesAction)
+        alert.addAction(cancelAction)
+        
+  
+        present(alert, animated: true, completion: nil)
     }
+
 }

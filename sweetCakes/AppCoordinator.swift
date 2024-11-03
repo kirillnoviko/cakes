@@ -70,17 +70,19 @@ class AppCoordinator: Coordinator {
     
     func showMainScreen() {
         guard let navigationController = navigationController else {
-            print("return start")
+            print("Navigation controller not found")
             return
         }
         
-        print(" start")
         let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
-        guard let onboardingVC = storyboard.instantiateViewController(withIdentifier: "MainScreenController") as? MainScreenController else {
+        guard let mainScreenVC = storyboard.instantiateViewController(withIdentifier: "MainScreenController") as? MainScreenController else {
             fatalError("MainScreenController not found")
         }
-        onboardingVC.coordinator = self
-        navigationController.pushViewController(onboardingVC, animated: true)
+        
+        mainScreenVC.coordinator = self
+        
+       
+        navigationController.setViewControllers([mainScreenVC], animated: true)
     }
     
 
@@ -188,23 +190,27 @@ class AppCoordinator: Coordinator {
     }
 
     func showFeedback() {
+       
+        guard let navigationController = navigationController else {
+            print("return start")
+            return
+        }
+        
+        print(" start")
+        
+        let storyboard = UIStoryboard(name: "FeedBack", bundle: nil)
+        guard let onboardingVC = storyboard.instantiateViewController(withIdentifier: "FeedbackController") as? FeedbackController else {
+            fatalError("FeedbackController not found")
+        }
+        
+        onboardingVC.coordinator = self
+        navigationController.pushViewController(onboardingVC, animated: true)
+        
+    }
+
+    func showQRScaner(){
         let qrScannerVC = QRCodeScannerViewController()
         navigationController!.pushViewController(qrScannerVC, animated: true)
-//        guard let navigationController = navigationController else {
-//            print("return start")
-//            returnCannot
-//        }
-//        
-//        print(" start")
-//        
-//        let storyboard = UIStoryboard(name: "FeedBack", bundle: nil)
-//        guard let onboardingVC = storyboard.instantiateViewController(withIdentifier: "FeedbackController") as? FeedbackController else {
-//            fatalError("FeedbackController not found")
-//        }
-//        
-//        onboardingVC.coordinator = self
-//        navigationController.pushViewController(onboardingVC, animated: true)
-        
     }
    
 

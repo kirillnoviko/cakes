@@ -102,7 +102,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-le-ChF">
                                     <rect key="frame" x="0.0" y="148.5" width="153.5" height="143.5"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <buttonConfiguration key="configuration" style="plain">
                                         <backgroundConfiguration key="background" image="cakeSprinkle6" imageContentMode="scaleAspectFit"/>
                                     </buttonConfiguration>
                                     <connections>

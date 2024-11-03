@@ -47,6 +47,7 @@ class OrderCakesController: UIViewController, UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CakeCell", for: indexPath) as! CakeCell
         let cake = cakes[indexPath.item]
         cell.configure(with: cake)
+       
         
        
         cell.addButtonTapped = { [weak self] in

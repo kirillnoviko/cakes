@@ -137,15 +137,49 @@
                                     <action selector="goToFeedback:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0T7-Yk-Xzt"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNy-ji-bgm">
+                                <rect key="frame" x="31" y="69" width="148.5" height="148.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundCircle" translatesAutoresizingMaskIntoConstraints="NO" id="ol5-Tj-fcF">
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="148.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-Pi-L2t">
+                                        <rect key="frame" x="14" y="14" width="120.5" height="120.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7hT-Pi-L2t" secondAttribute="height" multiplier="1:1" id="j2s-d1-HwG"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="qrcode.viewfinder" catalog="system"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickQR:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="USb-d1-a0v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7hT-Pi-L2t" secondAttribute="trailing" constant="14" id="7gX-aU-bfF"/>
+                                    <constraint firstItem="ol5-Tj-fcF" firstAttribute="top" secondItem="YNy-ji-bgm" secondAttribute="top" id="MZQ-AP-2J3"/>
+                                    <constraint firstAttribute="trailing" secondItem="ol5-Tj-fcF" secondAttribute="trailing" id="Nij-jF-ohV"/>
+                                    <constraint firstItem="7hT-Pi-L2t" firstAttribute="top" secondItem="YNy-ji-bgm" secondAttribute="top" constant="14" id="Pn7-jG-RjZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7hT-Pi-L2t" secondAttribute="bottom" constant="14" id="Rf7-MP-aLU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ol5-Tj-fcF" secondAttribute="bottom" id="cyn-1K-2Mv"/>
+                                    <constraint firstItem="7hT-Pi-L2t" firstAttribute="leading" secondItem="YNy-ji-bgm" secondAttribute="leading" constant="14" id="dGw-Wd-aVr"/>
+                                    <constraint firstItem="ol5-Tj-fcF" firstAttribute="leading" secondItem="YNy-ji-bgm" secondAttribute="leading" id="psT-H8-OBC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YNy-ji-bgm" firstAttribute="top" secondItem="bBU-qn-qJM" secondAttribute="bottom" constant="8" symbolic="YES" id="1t4-ef-bEn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XM5-zA-2Ed" secondAttribute="bottom" constant="15" id="3IV-uY-DpB"/>
                             <constraint firstAttribute="bottom" secondItem="m0O-JM-QfG" secondAttribute="bottom" id="7WX-ja-Uxj"/>
                             <constraint firstItem="2AS-wS-Lb4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7x7-vq-pgx"/>
                             <constraint firstItem="GpA-IE-e8o" firstAttribute="width" secondItem="2AS-wS-Lb4" secondAttribute="width" multiplier="0.14" id="DnQ-bG-KgI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GpA-IE-e8o" secondAttribute="trailing" constant="31" id="K9b-qZ-1dd"/>
+                            <constraint firstItem="YNy-ji-bgm" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.145038" id="MtI-XT-hNT"/>
                             <constraint firstItem="XM5-zA-2Ed" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="OPN-Zi-DOP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2AS-wS-Lb4" secondAttribute="trailing" id="Y44-iz-qN5"/>
                             <constraint firstItem="GpA-IE-e8o" firstAttribute="top" secondItem="bBU-qn-qJM" secondAttribute="bottom" constant="8" id="Y5Z-g0-83K"/>
@@ -154,6 +188,7 @@
                             <constraint firstItem="m0O-JM-QfG" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="fxK-cV-ys2"/>
                             <constraint firstItem="bBU-qn-qJM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="oK1-Eh-rNs"/>
                             <constraint firstItem="0dN-na-JsS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qb6-UW-igG"/>
+                            <constraint firstItem="YNy-ji-bgm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="rad-xg-yFE"/>
                             <constraint firstAttribute="bottom" secondItem="m0O-JM-QfG" secondAttribute="bottom" id="rf0-0A-4ZF"/>
                             <constraint firstItem="bBU-qn-qJM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="t4h-V0-9Z7"/>
                             <constraint firstItem="2AS-wS-Lb4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="thv-QD-dUq"/>
@@ -162,17 +197,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="constraint1" destination="7gX-aU-bfF" id="7Mn-KV-VaE"/>
+                        <outlet property="constraint2" destination="dGw-Wd-aVr" id="9k5-pJ-8LD"/>
+                        <outlet property="constraint3" destination="Rf7-MP-aLU" id="Yee-rZ-0lj"/>
+                        <outlet property="constraint4" destination="Pn7-jG-RjZ" id="93h-3t-TOq"/>
                         <outlet property="constraintWidth" destination="BRX-Od-hUM" id="CP6-pi-PWF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1.4492753623188408" y="-3.3482142857142856"/>
+            <point key="canvasLocation" x="1.171875" y="-3.5139092240117127"/>
         </scene>
     </scenes>
     <resources>
         <image name="ButtonCustLitle" width="174" height="58"/>
         <image name="background" width="390" height="844"/>
+        <image name="backgroundCircle" width="60" height="63"/>
         <image name="backgroundWhite" width="290" height="290"/>
         <image name="buttonAboute" width="70" height="112"/>
         <image name="buttonGame" width="89" height="100"/>
@@ -180,6 +220,7 @@
         <image name="buttonShop" width="89" height="100"/>
         <image name="butttonOrders" width="89" height="100"/>
         <image name="imageForbackground" width="174" height="409"/>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

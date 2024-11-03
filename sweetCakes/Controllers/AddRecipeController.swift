@@ -2,7 +2,9 @@ import UIKit
 import PhotosUI
 import CoreData
 
-class AddRecipeController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class AddRecipeController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
+
     var coordinator: AppCoordinator?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addRecipeButton: UIButton!
@@ -17,29 +19,42 @@ class AddRecipeController: UIViewController, UICollectionViewDelegate, UICollect
     weak var delegate: RecipeDelegate?
    
     override func viewDidLoad() {
-        super.viewDidLoad()
+          super.viewDidLoad()
+
+
+          collectionView.delegate = self
+          collectionView.dataSource = self
+          nameTextfield.delegate = self
+          instructionTextView.delegate = self
+
+
+          let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+          view.addGestureRecognizer(tapGesture)
+          
+
+          if UIDevice.current.userInterfaceIdiom == .pad {
+              constraintWidth1.constant = 600
+              constraintWidth2.constant = 600
+              constraintWidth3.constant = 600
+          } else {
+              constraintWidth1.constant = 342
+              constraintWidth2.constant = 342
+              constraintWidth3.constant = 342
+          }
+          
+          let nib = UINib(nibName: "AddRecipeCell", bundle: nil)
+          collectionView.register(nib, forCellWithReuseIdentifier: "AddRecipeCell")
+          collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+      }
     
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            constraintWidth1.constant = 600
-            constraintWidth2.constant = 600
-            constraintWidth3.constant = 600
-        } else {
-            constraintWidth1.constant = 342
-            constraintWidth2.constant = 342
-            constraintWidth3.constant = 342
-        }
-        
-        let nib = UINib(nibName: "AddRecipeCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "AddRecipeCell")
-
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        collectionView.collectionViewLayout = layout
-
-  
-    }
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         textField.resignFirstResponder()
+         return true
+     }
+     
+     @objc func hideKeyboard() {
+         view.endEditing(true)
+     }
     @IBAction func tapedGoBack(_ sender: Any) {
         coordinator?.goBack()
     }
@@ -73,7 +88,7 @@ class AddRecipeController: UIViewController, UICollectionViewDelegate, UICollect
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count + 1  // Добавляем 1 для кнопки добавления фото
+        return images.count + 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,13 +97,13 @@ class AddRecipeController: UIViewController, UICollectionViewDelegate, UICollect
         }
 
         if indexPath.row == 0 {
-            // Первая ячейка как кнопка добавления фото
+            
             cell.configure(with: UIImage(named: "frameAddRecipe")!)
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(uploadPhotoTapped))
             cell.addGestureRecognizer(tapGesture)
         } else {
-            cell.configure(with: images[indexPath.row - 1])  // Отображаем изображения начиная с первого добавленного
-            cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }  // Убираем жесты для ячеек с изображениями
+            cell.configure(with: images[indexPath.row - 1])
+            cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }  
         }
 
         return cell
