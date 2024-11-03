@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Digitalt.ttf">
+            <string>Digitalt</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="FillingSelectionView" id="pUq-Hq-ykl" customClass="FillingSelectionView" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ab7-7X-lrU">
+                    <rect key="frame" x="33.5" y="50" width="308" height="66.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundText" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-dF-tRn">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="66.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's pick a type of brownie filling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b45-vK-JNk">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="66.5"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="sgy-dF-tRn" firstAttribute="leading" secondItem="Ab7-7X-lrU" secondAttribute="leading" id="AUW-VD-T33"/>
+                        <constraint firstItem="sgy-dF-tRn" firstAttribute="leading" secondItem="Ab7-7X-lrU" secondAttribute="leading" id="Izo-3k-Kh4"/>
+                        <constraint firstAttribute="trailing" secondItem="b45-vK-JNk" secondAttribute="trailing" id="Lj9-cr-6Yd"/>
+                        <constraint firstAttribute="width" constant="308" id="XBU-5T-npB"/>
+                        <constraint firstItem="sgy-dF-tRn" firstAttribute="top" secondItem="Ab7-7X-lrU" secondAttribute="top" id="XO7-ZQ-8TF"/>
+                        <constraint firstItem="b45-vK-JNk" firstAttribute="leading" secondItem="Ab7-7X-lrU" secondAttribute="leading" id="Z1G-vH-KAG"/>
+                        <constraint firstItem="sgy-dF-tRn" firstAttribute="top" secondItem="Ab7-7X-lrU" secondAttribute="top" id="cPF-Se-fCZ"/>
+                        <constraint firstAttribute="bottom" secondItem="sgy-dF-tRn" secondAttribute="bottom" id="mpF-8K-v7B"/>
+                        <constraint firstAttribute="bottom" secondItem="b45-vK-JNk" secondAttribute="bottom" id="oGE-17-qjf"/>
+                        <constraint firstAttribute="trailing" secondItem="sgy-dF-tRn" secondAttribute="trailing" id="ry2-46-X0N"/>
+                        <constraint firstAttribute="trailing" secondItem="sgy-dF-tRn" secondAttribute="trailing" id="xqL-ii-fVy"/>
+                        <constraint firstAttribute="bottom" secondItem="sgy-dF-tRn" secondAttribute="bottom" id="xrq-gt-asU"/>
+                        <constraint firstItem="b45-vK-JNk" firstAttribute="top" secondItem="Ab7-7X-lrU" secondAttribute="top" id="yOO-aH-0vG"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wf7-ZQ-wTe">
+                    <rect key="frame" x="33.5" y="166.5" width="308" height="408"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-PB-Tbd">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Chocolate filling" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="fillingButtonTapped:" destination="pUq-Hq-ykl" eventType="touchUpInside" id="f73-KV-Vvc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPZ-8L-7TW">
+                            <rect key="frame" x="0.0" y="70" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="vanilla filling" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="fillingButtonTapped:" destination="pUq-Hq-ykl" eventType="touchUpInside" id="NFt-rE-aJM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrA-aS-kaL">
+                            <rect key="frame" x="0.0" y="140" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Berry filling" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="fillingButtonTapped:" destination="pUq-Hq-ykl" eventType="touchUpInside" id="H0I-qg-v0f"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqs-OD-e2I">
+                            <rect key="frame" x="0.0" y="210" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Caramel filling" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="fillingButtonTapped:" destination="pUq-Hq-ykl" eventType="touchUpInside" id="v5g-hc-WE5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnk-q7-liR">
+                            <rect key="frame" x="0.0" y="280" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Lemon curd" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="fillingButtonTapped:" destination="pUq-Hq-ykl" eventType="touchUpInside" id="QBf-mV-T8N"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSk-oq-T89">
+                            <rect key="frame" x="0.0" y="350" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Nut filling" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="fillingButtonTapped:" destination="pUq-Hq-ykl" eventType="touchUpInside" id="h9I-cX-Vl0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="308" id="MSw-X3-ckZ"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="308" id="ZsD-uu-qQG"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="308" id="afE-LS-1wd"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1mO-jY-Axi"/>
+            <constraints>
+                <constraint firstItem="Wf7-ZQ-wTe" firstAttribute="top" secondItem="Ab7-7X-lrU" secondAttribute="bottom" constant="50" id="Hdx-2O-BVU"/>
+                <constraint firstItem="Wf7-ZQ-wTe" firstAttribute="centerX" secondItem="pUq-Hq-ykl" secondAttribute="centerX" id="ZWP-7E-1tF"/>
+                <constraint firstItem="Ab7-7X-lrU" firstAttribute="centerX" secondItem="pUq-Hq-ykl" secondAttribute="centerX" id="eXl-lh-T7d"/>
+                <constraint firstItem="Wf7-ZQ-wTe" firstAttribute="top" secondItem="Ab7-7X-lrU" secondAttribute="bottom" constant="50" id="vnz-6i-ltH"/>
+                <constraint firstItem="Ab7-7X-lrU" firstAttribute="height" secondItem="pUq-Hq-ykl" secondAttribute="height" multiplier="0.1" id="xNO-QC-E0r"/>
+                <constraint firstItem="Ab7-7X-lrU" firstAttribute="top" secondItem="1mO-jY-Axi" secondAttribute="top" constant="30" id="ysL-ay-ICY"/>
+            </constraints>
+            <point key="canvasLocation" x="-60" y="17"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ButtonCust" width="279" height="58"/>
+        <image name="backgroundText" width="308" height="136"/>
+    </resources>
+</document>

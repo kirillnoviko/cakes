@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Digitalt.ttf">
+            <string>Digitalt</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Privacy And Rule Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyAndRuleController" id="Y6W-OH-hqX" customClass="PrivacyAndRuleController" customModule="sweetCakes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wAb-vC-SqS">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy and Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uH-VZ-wWF">
+                                <rect key="frame" x="86.333333333333329" y="47" width="255.66666666666669" height="24.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.91722756620000001" green="0.25784010371622623" blue="0.8665520771298435" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-df-FVA">
+                                <rect key="frame" x="149.66666666666669" y="826.33333333333337" width="128.66666666666669" height="55.666666666666629"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6m1-I3-Je8"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="s3o-vF-bYe">
+                                <rect key="frame" x="53.666666666666657" y="752.33333333333337" width="321" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev3-CL-rcf">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="74z-fW-m52"/>
+                                            <constraint firstAttribute="height" constant="36" id="uGl-06-baj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="checkButton"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="checkBoxTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uYB-bK-XQN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept the privacy policy and rules of use of «Sweet cake - kate»" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEL-Ju-wAx">
+                                        <rect key="frame" x="48" y="0.0" width="273" height="36"/>
+                                        <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.91722756620000001" green="0.25784010369999999" blue="0.86655207710000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-Yp-7j3">
+                                <rect key="frame" x="33.666666666666657" y="81" width="361" height="663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTextView" translatesAutoresizingMaskIntoConstraints="NO" id="080-D7-qCV">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="663"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="3" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dtl-eg-xOB">
+                                        <rect key="frame" x="8" y="8" width="345" height="647"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex mi, id sollicitudin risus porttitor aliquam. Maecenas nisl ante, dictum at est nec, eleifend tincidunt odio. Vivamus hendrerit posuere arcu sit amet vehicula. Sed sit amet condimentum elit, pulvinar tincidunt erat. Aliquam erat volutpat. Curabitur euismod iaculis nibh vel efficitur. Quisque viverra aliquet lacus. Donec mollis dolor in metus faucibus dapibus. Sed rhoncus suscipit ultrices. Aliquam ultrices posuere nunc, a gravida lacus viverra vitae. Sed varius odio erat, eget condimentum felis mollis nec. Duis vel hendrerit dui, nec dapibus erat. Nam tincidunt lobortis sapien id cursus.   Integer venenatis velit vitae ipsum accumsan tempor. Nulla a pretium dolor. Cras cursus placerat tellus id posuere. Pellentesque tincidunt, purus non mattis lobortis, mi lectus fringilla ante, eget pretium diam mauris vel risus. Ut quis urna felis. Nunc dictum leo et urna pretium pretium. Nam hendrerit ante eu est rutrum, viverra mollis nisi molestie. Etiam facilisis turpis et urna tempus rhoncus. Etiam aliquet diam vel massa consectetur dapibus. Cras efficitur, sem eu dictum suscipit, odio dolor laoreet lacus, et mollis felis orci vitae sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</mutableString>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="080-D7-qCV" secondAttribute="bottom" id="9WY-Xk-qSq"/>
+                                    <constraint firstItem="080-D7-qCV" firstAttribute="top" secondItem="eUY-Yp-7j3" secondAttribute="top" id="K6p-JB-zdk"/>
+                                    <constraint firstItem="Dtl-eg-xOB" firstAttribute="leading" secondItem="eUY-Yp-7j3" secondAttribute="leading" constant="8" id="Nc8-CN-8pB"/>
+                                    <constraint firstItem="080-D7-qCV" firstAttribute="leading" secondItem="eUY-Yp-7j3" secondAttribute="leading" id="Pc6-af-G0H"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dtl-eg-xOB" secondAttribute="bottom" constant="8" id="Pt1-iv-iaX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dtl-eg-xOB" secondAttribute="trailing" constant="8" id="dYk-DF-MJV"/>
+                                    <constraint firstItem="Dtl-eg-xOB" firstAttribute="top" secondItem="eUY-Yp-7j3" secondAttribute="top" constant="8" id="iGP-yF-I8r"/>
+                                    <constraint firstAttribute="trailing" secondItem="080-D7-qCV" secondAttribute="trailing" id="s08-XC-oZB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wAb-vC-SqS" secondAttribute="trailing" id="2V3-Ea-dPg"/>
+                            <constraint firstItem="MQn-df-FVA" firstAttribute="width" secondItem="wAb-vC-SqS" secondAttribute="width" multiplier="0.3" id="6lr-cf-pHV"/>
+                            <constraint firstItem="eUY-Yp-7j3" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" multiplier="0.784615" id="75w-GA-eka"/>
+                            <constraint firstItem="6uH-VZ-wWF" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8bF-hV-Pmi"/>
+                            <constraint firstItem="wAb-vC-SqS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="BQU-pI-ViJ"/>
+                            <constraint firstItem="s3o-vF-bYe" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.75" id="Dj9-uw-PRh"/>
+                            <constraint firstItem="eUY-Yp-7j3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="K1i-X5-KI0"/>
+                            <constraint firstItem="eUY-Yp-7j3" firstAttribute="top" secondItem="6uH-VZ-wWF" secondAttribute="bottom" constant="9.6699999999999999" id="Rps-W8-U1L"/>
+                            <constraint firstItem="s3o-vF-bYe" firstAttribute="top" secondItem="eUY-Yp-7j3" secondAttribute="bottom" constant="8.3300000000000001" id="Td5-SM-k7H"/>
+                            <constraint firstItem="MQn-df-FVA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="U6p-1C-lky"/>
+                            <constraint firstItem="wAb-vC-SqS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VsQ-G3-Wyh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MQn-df-FVA" secondAttribute="bottom" constant="10" id="WYK-KU-f4p"/>
+                            <constraint firstItem="MQn-df-FVA" firstAttribute="height" secondItem="wAb-vC-SqS" secondAttribute="height" multiplier="0.06" id="Whd-JT-W46"/>
+                            <constraint firstItem="eUY-Yp-7j3" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.843458" id="hq1-jd-sxO"/>
+                            <constraint firstItem="6uH-VZ-wWF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kcd-6j-55j"/>
+                            <constraint firstItem="s3o-vF-bYe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="n1V-b2-ciP"/>
+                            <constraint firstAttribute="bottom" secondItem="wAb-vC-SqS" secondAttribute="bottom" id="naU-YE-xGb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="consentSwitch" destination="Ev3-CL-rcf" id="dRL-u6-AP4"/>
+                        <outlet property="continueButton" destination="MQn-df-FVA" id="SSB-Qm-5Hf"/>
+                        <outlet property="textView" destination="Dtl-eg-xOB" id="ji6-jb-K0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.859813084112147" y="-2.5917926565874732"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="390" height="844"/>
+        <image name="backgroundTextView" width="334" height="553"/>
+        <image name="checkButton" width="36" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

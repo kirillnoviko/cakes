@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Digitalt.ttf">
+            <string>Digitalt</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BackupFinishView" id="v08-AZ-3p3" customClass="BackupFinishView" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The message has been successfully sent! Wait for feedback to the mail." textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSv-Ls-9b2">
+                    <rect key="frame" x="49" y="141" width="295" height="174.66666666666663"/>
+                    <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.91722756620000001" green="0.25784010369999999" blue="0.86655207710000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpD-YR-LrC">
+                    <rect key="frame" x="109.66666666666669" y="335.66666666666669" width="174" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="FLy-fY-6Bb"/>
+                        <constraint firstAttribute="width" secondItem="OpD-YR-LrC" secondAttribute="height" multiplier="171:49" id="qdu-DX-Mkh"/>
+                        <constraint firstAttribute="width" constant="174" id="yLn-SA-bfK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="back to menu" backgroundImage="ButtonCustLitle"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="NBk-bn-HXt"/>
+            <constraints>
+                <constraint firstItem="OpD-YR-LrC" firstAttribute="centerX" secondItem="v08-AZ-3p3" secondAttribute="centerX" id="JlH-KE-yCQ"/>
+                <constraint firstItem="lSv-Ls-9b2" firstAttribute="top" secondItem="NBk-bn-HXt" secondAttribute="top" constant="82" id="JvQ-zw-rnb"/>
+                <constraint firstItem="OpD-YR-LrC" firstAttribute="width" secondItem="OpD-YR-LrC" secondAttribute="height" multiplier="171:49" id="OV5-vX-iEx"/>
+                <constraint firstItem="lSv-Ls-9b2" firstAttribute="width" secondItem="v08-AZ-3p3" secondAttribute="width" multiplier="0.75" id="OlH-9w-DJV"/>
+                <constraint firstItem="lSv-Ls-9b2" firstAttribute="centerX" secondItem="v08-AZ-3p3" secondAttribute="centerX" id="ZKW-55-Be2"/>
+                <constraint firstItem="OpD-YR-LrC" firstAttribute="top" secondItem="lSv-Ls-9b2" secondAttribute="bottom" constant="20" id="xbC-xq-RoO"/>
+            </constraints>
+            <connections>
+                <outlet property="returnToMainMenuButton" destination="OpD-YR-LrC" id="kWn-0H-egZ"/>
+            </connections>
+            <point key="canvasLocation" x="189" y="18"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ButtonCustLitle" width="174" height="58"/>
+    </resources>
+</document>

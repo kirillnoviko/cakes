@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Manrope-Regular.ttf">
+            <string>Manrope-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyOrderCell" reuseIdentifier="MyOrderCell" id="Bas-Ci-5qU" customClass="MyOrderCell" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7lc-rb-c69">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="V2v-zd-Qhn">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="142"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U04-Dg-UP7">
+                        <rect key="frame" x="274.33333333333331" y="110.66666666666667" width="117.66666666666669" height="31.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Cancel order" backgroundImage="buttonCancel">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelButtonTapped:" destination="Bas-Ci-5qU" eventType="touchUpInside" id="rBJ-qc-flK"/>
+                        </connections>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O7J-Gh-dnA">
+                        <rect key="frame" x="106" y="0.0" width="286" height="101"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ywb-cz-YUe">
+                                <rect key="frame" x="0.0" y="0.0" width="286" height="45.333333333333336"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-OW-8fX">
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="45.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-Lx-p1e">
+                                <rect key="frame" x="0.0" y="53.333333333333336" width="286" height="17.666666666666664"/>
+                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgA-O1-E24">
+                                <rect key="frame" x="0.0" y="79" width="286" height="22"/>
+                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FgA-O1-E24" firstAttribute="width" secondItem="Ywb-cz-YUe" secondAttribute="width" id="2uu-Ui-yc0"/>
+                            <constraint firstItem="Ywb-cz-YUe" firstAttribute="width" secondItem="O7J-Gh-dnA" secondAttribute="width" id="3tH-q9-kVw"/>
+                            <constraint firstItem="fFm-Lx-p1e" firstAttribute="width" secondItem="Ywb-cz-YUe" secondAttribute="width" id="I7i-ww-4Ly"/>
+                            <constraint firstItem="Ywb-cz-YUe" firstAttribute="height" secondItem="O7J-Gh-dnA" secondAttribute="height" multiplier="0.45" id="Kgc-88-9rD"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="O7J-Gh-dnA" firstAttribute="leading" secondItem="V2v-zd-Qhn" secondAttribute="trailing" constant="8" id="0kH-ih-4xf"/>
+                    <constraint firstAttribute="bottom" secondItem="V2v-zd-Qhn" secondAttribute="bottom" id="4Db-jT-Htv"/>
+                    <constraint firstAttribute="bottom" secondItem="U04-Dg-UP7" secondAttribute="bottom" id="7EC-PT-X7B"/>
+                    <constraint firstItem="O7J-Gh-dnA" firstAttribute="height" secondItem="7lc-rb-c69" secondAttribute="height" multiplier="0.711268" id="7Ow-Wr-JW2"/>
+                    <constraint firstItem="O7J-Gh-dnA" firstAttribute="top" secondItem="7lc-rb-c69" secondAttribute="top" id="7p5-OC-CC2"/>
+                    <constraint firstItem="V2v-zd-Qhn" firstAttribute="top" secondItem="7lc-rb-c69" secondAttribute="top" id="9Px-Tw-2oG"/>
+                    <constraint firstAttribute="trailing" secondItem="O7J-Gh-dnA" secondAttribute="trailing" id="B8x-yP-Vbb"/>
+                    <constraint firstItem="U04-Dg-UP7" firstAttribute="height" secondItem="7lc-rb-c69" secondAttribute="height" multiplier="0.22" id="BCJ-2c-WII"/>
+                    <constraint firstItem="V2v-zd-Qhn" firstAttribute="leading" secondItem="7lc-rb-c69" secondAttribute="leading" id="CdZ-Kr-wcX"/>
+                    <constraint firstAttribute="bottom" secondItem="U04-Dg-UP7" secondAttribute="bottom" id="QJS-G0-fTw"/>
+                    <constraint firstAttribute="trailing" secondItem="U04-Dg-UP7" secondAttribute="trailing" id="hG1-A2-mOP"/>
+                    <constraint firstItem="U04-Dg-UP7" firstAttribute="width" secondItem="7lc-rb-c69" secondAttribute="width" multiplier="0.3" id="hHX-bj-NBR"/>
+                    <constraint firstItem="V2v-zd-Qhn" firstAttribute="width" secondItem="7lc-rb-c69" secondAttribute="width" multiplier="0.25" id="xjX-2n-nOD"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="392" height="142"/>
+            <connections>
+                <outlet property="cancelButton" destination="U04-Dg-UP7" id="CVb-Ty-TPZ"/>
+                <outlet property="contentView2" destination="i4Y-OW-8fX" id="j5J-ej-K4E"/>
+                <outlet property="deliveryTimeLabel" destination="fFm-Lx-p1e" id="caK-bu-7tQ"/>
+                <outlet property="statusLabel" destination="FgA-O1-E24" id="lPc-zf-kSD"/>
+            </connections>
+            <point key="canvasLocation" x="277.86259541984731" y="28.169014084507044"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="buttonCancel" width="119" height="29"/>
+        <image name="cart" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Digitalt.ttf">
+            <string>Digitalt</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BatterSelectionView" id="Mws-Gz-Fax" customClass="BatterSelectionView" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cC-Kj-IZd">
+                    <rect key="frame" x="42.666666666666657" y="109" width="308" height="85.333333333333314"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundText" translatesAutoresizingMaskIntoConstraints="NO" id="qsb-Sc-RfI">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="85.333333333333329"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's pick a type of brownie batter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qar-Aj-INZ">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="85.333333333333329"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Qar-Aj-INZ" firstAttribute="top" secondItem="0cC-Kj-IZd" secondAttribute="top" id="7xD-fo-IBN"/>
+                        <constraint firstAttribute="bottom" secondItem="qsb-Sc-RfI" secondAttribute="bottom" id="Gtt-yd-Pi0"/>
+                        <constraint firstAttribute="width" constant="308" id="Liz-wm-qZR"/>
+                        <constraint firstAttribute="bottom" secondItem="Qar-Aj-INZ" secondAttribute="bottom" id="Uqx-UX-4b9"/>
+                        <constraint firstItem="qsb-Sc-RfI" firstAttribute="top" secondItem="0cC-Kj-IZd" secondAttribute="top" id="WCk-lc-GPQ"/>
+                        <constraint firstItem="qsb-Sc-RfI" firstAttribute="top" secondItem="0cC-Kj-IZd" secondAttribute="top" id="d3B-eX-bcE"/>
+                        <constraint firstAttribute="bottom" secondItem="qsb-Sc-RfI" secondAttribute="bottom" id="h4c-v2-jmV"/>
+                        <constraint firstAttribute="trailing" secondItem="qsb-Sc-RfI" secondAttribute="trailing" id="n4O-gx-cfI"/>
+                        <constraint firstItem="qsb-Sc-RfI" firstAttribute="leading" secondItem="0cC-Kj-IZd" secondAttribute="leading" id="neG-04-F9n"/>
+                        <constraint firstItem="Qar-Aj-INZ" firstAttribute="leading" secondItem="0cC-Kj-IZd" secondAttribute="leading" id="qji-md-RKA"/>
+                        <constraint firstAttribute="trailing" secondItem="qsb-Sc-RfI" secondAttribute="trailing" id="uR7-A6-5XI"/>
+                        <constraint firstAttribute="trailing" secondItem="Qar-Aj-INZ" secondAttribute="trailing" id="v6K-7o-KAR"/>
+                        <constraint firstItem="qsb-Sc-RfI" firstAttribute="leading" secondItem="0cC-Kj-IZd" secondAttribute="leading" id="yNg-AZ-z4w"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rIx-UM-7By">
+                    <rect key="frame" x="42.666666666666657" y="244.33333333333337" width="308" height="408"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIr-ye-DIr">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Vanilla pastry" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="batterButtonTapped:" destination="Mws-Gz-Fax" eventType="touchUpInside" id="Okc-be-08G"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVy-eU-jPO">
+                            <rect key="frame" x="0.0" y="69.999999999999972" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Chocolate pastry" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="batterButtonTapped:" destination="Mws-Gz-Fax" eventType="touchUpInside" id="Hfh-EW-49b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tn6-Dg-Sxv">
+                            <rect key="frame" x="0.0" y="139.99999999999997" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Berry pastry" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="batterButtonTapped:" destination="Mws-Gz-Fax" eventType="touchUpInside" id="mP0-yx-w1J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPV-Ha-GHU">
+                            <rect key="frame" x="0.0" y="209.99999999999997" width="308" height="58.000000000000028"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Lemon pastry" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="batterButtonTapped:" destination="Mws-Gz-Fax" eventType="touchUpInside" id="hbl-U2-Kvi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZg-20-pdC">
+                            <rect key="frame" x="0.0" y="280" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cinnamon pastry" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="batterButtonTapped:" destination="Mws-Gz-Fax" eventType="touchUpInside" id="rAc-Jn-hhw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsa-uC-Yhn">
+                            <rect key="frame" x="0.0" y="350" width="308" height="58"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Coconut dough" backgroundImage="ButtonCust"/>
+                            <connections>
+                                <action selector="batterButtonTapped:" destination="Mws-Gz-Fax" eventType="touchUpInside" id="QZY-gJ-CkA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="308" id="VGJ-SN-DoZ"/>
+                        <constraint firstAttribute="width" constant="308" id="mZ4-kb-eVc"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="HU2-Fq-Lg0"/>
+            <constraints>
+                <constraint firstItem="rIx-UM-7By" firstAttribute="top" secondItem="0cC-Kj-IZd" secondAttribute="bottom" constant="50" id="Apj-tj-JzO"/>
+                <constraint firstItem="0cC-Kj-IZd" firstAttribute="centerX" secondItem="Mws-Gz-Fax" secondAttribute="centerX" id="HJ8-sp-Oun"/>
+                <constraint firstItem="0cC-Kj-IZd" firstAttribute="top" secondItem="HU2-Fq-Lg0" secondAttribute="top" constant="50" id="OI1-mw-Du4"/>
+                <constraint firstItem="rIx-UM-7By" firstAttribute="centerX" secondItem="Mws-Gz-Fax" secondAttribute="centerX" id="Qh1-iO-ezf"/>
+                <constraint firstItem="0cC-Kj-IZd" firstAttribute="height" secondItem="Mws-Gz-Fax" secondAttribute="height" multiplier="0.1" id="zLp-dj-z3l"/>
+            </constraints>
+            <point key="canvasLocation" x="296.94656488549617" y="56.338028169014088"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ButtonCust" width="279" height="58"/>
+        <image name="backgroundText" width="308" height="136"/>
+    </resources>
+</document>

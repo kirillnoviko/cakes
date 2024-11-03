@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Digitalt.ttf">
+            <string>Digitalt</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CreamSelectionView" id="8Zd-np-rnD" customClass="CreamSelectionView" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8J-jg-HyL">
+                    <rect key="frame" x="33.5" y="70" width="308" height="66.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundText" translatesAutoresizingMaskIntoConstraints="NO" id="job-Sy-XyN">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="66.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's pick out the cream for brownie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-YX-AJ8">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="66.5"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="W8i-YX-AJ8" secondAttribute="bottom" id="2cx-F8-qVe"/>
+                        <constraint firstAttribute="trailing" secondItem="W8i-YX-AJ8" secondAttribute="trailing" id="6nl-C8-GCk"/>
+                        <constraint firstAttribute="trailing" secondItem="job-Sy-XyN" secondAttribute="trailing" id="7F9-vx-hJN"/>
+                        <constraint firstItem="job-Sy-XyN" firstAttribute="top" secondItem="O8J-jg-HyL" secondAttribute="top" id="Kfj-SI-ugu"/>
+                        <constraint firstItem="W8i-YX-AJ8" firstAttribute="leading" secondItem="O8J-jg-HyL" secondAttribute="leading" id="Khf-PP-bvb"/>
+                        <constraint firstItem="W8i-YX-AJ8" firstAttribute="top" secondItem="O8J-jg-HyL" secondAttribute="top" id="bXL-8R-15w"/>
+                        <constraint firstAttribute="bottom" secondItem="job-Sy-XyN" secondAttribute="bottom" id="c8e-Qs-glf"/>
+                        <constraint firstAttribute="width" constant="308" id="dxp-Qd-WKf"/>
+                        <constraint firstItem="job-Sy-XyN" firstAttribute="leading" secondItem="O8J-jg-HyL" secondAttribute="leading" id="fSr-wX-yv5"/>
+                        <constraint firstAttribute="trailing" secondItem="job-Sy-XyN" secondAttribute="trailing" id="g5H-iW-htR"/>
+                        <constraint firstAttribute="bottom" secondItem="job-Sy-XyN" secondAttribute="bottom" id="hjq-oN-ISy"/>
+                        <constraint firstItem="job-Sy-XyN" firstAttribute="top" secondItem="O8J-jg-HyL" secondAttribute="top" id="iYb-pS-aq7"/>
+                        <constraint firstItem="job-Sy-XyN" firstAttribute="leading" secondItem="O8J-jg-HyL" secondAttribute="leading" id="vW0-SM-2O3"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-Sr-uLx">
+                    <rect key="frame" x="112.5" y="166.5" width="150" height="467"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK6-kp-uu6">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="152.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="cakeCream1" imageContentMode="scaleAspectFit"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="creamCButtonTapped:" destination="8Zd-np-rnD" eventType="touchUpInside" id="jIc-bE-xPD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLC-PR-U3K">
+                            <rect key="frame" x="0.0" y="157.5" width="150" height="152.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="cakeCream2" imageContentMode="scaleAspectFit"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="creamCButtonTapped:" destination="8Zd-np-rnD" eventType="touchUpInside" id="cGV-o1-2ez"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izs-YP-nGF">
+                            <rect key="frame" x="0.0" y="315" width="150" height="152"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="cakeCream3" imageContentMode="scaleAspectFit"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="creamCButtonTapped:" destination="8Zd-np-rnD" eventType="touchUpInside" id="sQI-Ed-9Te"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="vLC-PR-U3K" firstAttribute="width" secondItem="0ky-Sr-uLx" secondAttribute="width" id="DA0-MQ-pYK"/>
+                        <constraint firstItem="dK6-kp-uu6" firstAttribute="width" secondItem="0ky-Sr-uLx" secondAttribute="width" id="ect-N9-wi4"/>
+                        <constraint firstItem="Izs-YP-nGF" firstAttribute="width" secondItem="0ky-Sr-uLx" secondAttribute="width" id="lxe-kp-het"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="zbP-20-00K"/>
+            <constraints>
+                <constraint firstItem="O8J-jg-HyL" firstAttribute="top" secondItem="zbP-20-00K" secondAttribute="top" constant="50" id="8n3-fz-b2O"/>
+                <constraint firstItem="0ky-Sr-uLx" firstAttribute="centerX" secondItem="8Zd-np-rnD" secondAttribute="centerX" id="ANk-RB-QP9"/>
+                <constraint firstItem="O8J-jg-HyL" firstAttribute="height" secondItem="8Zd-np-rnD" secondAttribute="height" multiplier="0.1" id="a6c-K9-zpt"/>
+                <constraint firstItem="O8J-jg-HyL" firstAttribute="centerX" secondItem="8Zd-np-rnD" secondAttribute="centerX" id="dFz-IV-SoX"/>
+                <constraint firstItem="0ky-Sr-uLx" firstAttribute="height" secondItem="8Zd-np-rnD" secondAttribute="height" multiplier="0.7" id="efP-pt-VYt"/>
+                <constraint firstItem="0ky-Sr-uLx" firstAttribute="width" secondItem="8Zd-np-rnD" secondAttribute="width" multiplier="0.4" id="jpo-gK-Hva"/>
+                <constraint firstItem="0ky-Sr-uLx" firstAttribute="top" secondItem="O8J-jg-HyL" secondAttribute="bottom" constant="30" id="o62-qn-1M1"/>
+            </constraints>
+            <connections>
+                <outlet property="button1" destination="dK6-kp-uu6" id="fBo-vw-sc8"/>
+                <outlet property="button2" destination="vLC-PR-U3K" id="wsh-t5-8oV"/>
+                <outlet property="button3" destination="Izs-YP-nGF" id="HUe-eH-Xze"/>
+            </connections>
+            <point key="canvasLocation" x="516.79389312977094" y="-227.46478873239437"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundText" width="308" height="136"/>
+        <image name="cakeCream1" width="155" height="159"/>
+        <image name="cakeCream2" width="155" height="159"/>
+        <image name="cakeCream3" width="155" height="159"/>
+    </resources>
+</document>

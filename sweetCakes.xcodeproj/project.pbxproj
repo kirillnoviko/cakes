@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD4EBCB02636F6A48AF9E2B4 /* Pods_sweetCakes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2554FDB85A6986726B173B43 /* Pods_sweetCakes.framework */; };
+		CE951D362CCAA88500F98704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D352CCAA88500F98704 /* AppDelegate.swift */; };
+		CE951D382CCAA88500F98704 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D372CCAA88500F98704 /* SceneDelegate.swift */; };
+		CE951D3F2CCAA88700F98704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE951D3E2CCAA88700F98704 /* Assets.xcassets */; };
+		CE951D422CCAA88700F98704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D402CCAA88700F98704 /* LaunchScreen.storyboard */; };
+		CE951D4C2CCAAA8C00F98704 /* Digitalt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE951D4B2CCAAA8800F98704 /* Digitalt.ttf */; };
+		CE951D4E2CCAABEE00F98704 /* PreviewWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D4D2CCAABEE00F98704 /* PreviewWindow.storyboard */; };
+		CE951D522CCACD9A00F98704 /* PrevieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D512CCACD9A00F98704 /* PrevieController.swift */; };
+		CE951D542CCAD04D00F98704 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D532CCAD04D00F98704 /* Coordinator.swift */; };
+		CE951D562CCAD05E00F98704 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D552CCAD05E00F98704 /* AppCoordinator.swift */; };
+		CE951D582CCADFB000F98704 /* PrivacyAndRule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D572CCADFB000F98704 /* PrivacyAndRule.storyboard */; };
+		CE951D5A2CCADFC500F98704 /* PrivacyAndRuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D592CCADFC500F98704 /* PrivacyAndRuleController.swift */; };
+		CE951D5C2CCC4CFB00F98704 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D5B2CCC4CFB00F98704 /* Onboarding.storyboard */; };
+		CE951D5E2CCC4D0C00F98704 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D5D2CCC4D0C00F98704 /* OnboardingController.swift */; };
+		CE951D602CCC599900F98704 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D5F2CCC599900F98704 /* MainScreenController.swift */; };
+		CE951D622CCC5B5200F98704 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D612CCC5B5200F98704 /* MainScreen.storyboard */; };
+		CE951D642CCD8BDF00F98704 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D632CCD8BDF00F98704 /* UIColor + Extension.swift */; };
+		CE951D662CCED3C500F98704 /* OrderCakes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D652CCED3C500F98704 /* OrderCakes.storyboard */; };
+		CE951D682CCEDAB500F98704 /* OrderCakesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D672CCEDAB500F98704 /* OrderCakesController.swift */; };
+		CE951D6C2CCEDB2600F98704 /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D6B2CCEDB2600F98704 /* Cake.swift */; };
+		CE951D6E2CCEDB6200F98704 /* CakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D6D2CCEDB6200F98704 /* CakeCell.swift */; };
+		CE951D762CCEDF3500F98704 /* CakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE951D752CCEDF3500F98704 /* CakeCell.xib */; };
+		CE951D782CCEF65E00F98704 /* OrderPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951D772CCEF65E00F98704 /* OrderPlace.storyboard */; };
+		CE951D7A2CCF040D00F98704 /* OrderPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D792CCF040D00F98704 /* OrderPlaceController.swift */; };
+		CE951D7C2CD02C8400F98704 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951D7B2CD02C8400F98704 /* OrderCell.swift */; };
+		CE951D7E2CD02D2F00F98704 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE951D7D2CD02D2F00F98704 /* OrderCell.xib */; };
+		CEA66DC62CD676C0008927EB /* BatterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA66DC52CD676C0008927EB /* BatterView.xib */; };
+		CEA66DC82CD6FC88008927EB /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA66DC72CD6FC88008927EB /* QRScannerViewController.swift */; };
+		CEADF2862CD242D900312C80 /* OrderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2842CD242D900312C80 /* OrderModel.xcdatamodeld */; };
+		CEADF2882CD2519200312C80 /* MyOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2872CD2519200312C80 /* MyOrders.storyboard */; };
+		CEADF28A2CD2528D00312C80 /* MyOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2892CD2528D00312C80 /* MyOrdersController.swift */; };
+		CEADF28C2CD252E400312C80 /* MyOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF28B2CD252E400312C80 /* MyOrderCell.swift */; };
+		CEADF28E2CD252FA00312C80 /* MyOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF28D2CD252FA00312C80 /* MyOrderCell.xib */; };
+		CEADF2902CD2C3D100312C80 /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADF28F2CD2C3D100312C80 /* AddRecipe.storyboard */; };
+		CEADF2982CD2C92400312C80 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2912CD2C92400312C80 /* Manrope-Regular.ttf */; };
+		CEADF2992CD2C92400312C80 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2922CD2C92400312C80 /* Manrope-ExtraLight.ttf */; };
+		CEADF29A2CD2C92400312C80 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2932CD2C92400312C80 /* Manrope-SemiBold.ttf */; };
+		CEADF29B2CD2C92400312C80 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2942CD2C92400312C80 /* Manrope-Bold.ttf */; };
+		CEADF29C2CD2C92400312C80 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2952CD2C92400312C80 /* Manrope-Medium.ttf */; };
+		CEADF29D2CD2C92400312C80 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2962CD2C92400312C80 /* Manrope-ExtraBold.ttf */; };
+		CEADF29E2CD2C92400312C80 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2972CD2C92400312C80 /* Manrope-Light.ttf */; };
+		CEADF2A02CD2CF7300312C80 /* AddRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF29F2CD2CF7300312C80 /* AddRecipeController.swift */; };
+		CEADF2A22CD2D59800312C80 /* AddRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2A12CD2D59800312C80 /* AddRecipeCell.swift */; };
+		CEADF2A42CD2D5D200312C80 /* AddRecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2A32CD2D5D200312C80 /* AddRecipeCell.xib */; };
+		CEADF2A82CD387A900312C80 /* FeedBack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2A72CD387A900312C80 /* FeedBack.storyboard */; };
+		CEADF2AA2CD387D400312C80 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2A92CD387D400312C80 /* FeedbackController.swift */; };
+		CEADF2AC2CD3ED9300312C80 /* FeedbackFinish.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2AB2CD3ED9300312C80 /* FeedbackFinish.xib */; };
+		CEADF2AE2CD3EEBA00312C80 /* BackupFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2AD2CD3EEBA00312C80 /* BackupFinishView.swift */; };
+		CEADF2B02CD4F61F00312C80 /* RecipeListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2AF2CD4F61F00312C80 /* RecipeListView.storyboard */; };
+		CEADF2B22CD4F68F00312C80 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2B12CD4F68F00312C80 /* RecipeListViewController.swift */; };
+		CEADF2B42CD4FA7A00312C80 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2B32CD4FA7A00312C80 /* RecipeCell.xib */; };
+		CEADF2B62CD4FABB00312C80 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2B52CD4FABB00312C80 /* RecipeCell.swift */; };
+		CEADF2B82CD50C4700312C80 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2B72CD50C4700312C80 /* RecipeDetailViewController.swift */; };
+		CEADF2BA2CD50D6C00312C80 /* RecipeDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2B92CD50D6C00312C80 /* RecipeDetailView.storyboard */; };
+		CEADF2BC2CD5729500312C80 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2BB2CD5729500312C80 /* AnimatedViewController.swift */; };
+		CEADF2BE2CD587AD00312C80 /* ShapeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2BD2CD587AD00312C80 /* ShapeSelectionView.swift */; };
+		CEADF2C32CD5897F00312C80 /* BatterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2C22CD5897F00312C80 /* BatterSelectionView.swift */; };
+		CEADF2C52CD5899A00312C80 /* FillingSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2C42CD5899A00312C80 /* FillingSelectionView.swift */; };
+		CEADF2C72CD58A0500312C80 /* CreamSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2C62CD58A0500312C80 /* CreamSelectionView.swift */; };
+		CEADF2C92CD58A1C00312C80 /* SprinkleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2C82CD58A1C00312C80 /* SprinkleSelectionView.swift */; };
+		CEADF2CB2CD58A3D00312C80 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF2CA2CD58A3D00312C80 /* SummaryView.swift */; };
+		CEADF2CD2CD58CB500312C80 /* ShapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2CC2CD58CB500312C80 /* ShapeView.xib */; };
+		CEADF2D12CD58CE000312C80 /* FillingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2D02CD58CE000312C80 /* FillingView.xib */; };
+		CEADF2D32CD58CF400312C80 /* CreamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2D22CD58CF400312C80 /* CreamView.xib */; };
+		CEADF2D52CD58D1700312C80 /* SprinkleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2D42CD58D1700312C80 /* SprinkleView.xib */; };
+		CEADF2D72CD58D2E00312C80 /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2D62CD58D2E00312C80 /* SummaryView.xib */; };
+		CEADF2D92CD6355600312C80 /* AnimatedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADF2D82CD6355600312C80 /* AnimatedView.storyboard */; };
+		CEF4FB912CD16C8A0019DDB2 /* CalendarModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4FB902CD16C8A0019DDB2 /* CalendarModalViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2554FDB85A6986726B173B43 /* Pods_sweetCakes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sweetCakes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2089CA7776CBB589C7202D /* Pods-sweetCakes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sweetCakes.debug.xcconfig"; path = "Target Support Files/Pods-sweetCakes/Pods-sweetCakes.debug.xcconfig"; sourceTree = "<group>"; };
+		3491AC13AD2C353B9757E049 /* Pods-sweetCakes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sweetCakes.release.xcconfig"; path = "Target Support Files/Pods-sweetCakes/Pods-sweetCakes.release.xcconfig"; sourceTree = "<group>"; };
+		CE951D322CCAA88500F98704 /* sweetCakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sweetCakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE951D352CCAA88500F98704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE951D372CCAA88500F98704 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE951D3E2CCAA88700F98704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE951D412CCAA88700F98704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE951D432CCAA88700F98704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE951D4B2CCAAA8800F98704 /* Digitalt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digitalt.ttf; sourceTree = "<group>"; };
+		CE951D4D2CCAABEE00F98704 /* PreviewWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewWindow.storyboard; sourceTree = "<group>"; };
+		CE951D512CCACD9A00F98704 /* PrevieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevieController.swift; sourceTree = "<group>"; };
+		CE951D532CCAD04D00F98704 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CE951D552CCAD05E00F98704 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CE951D572CCADFB000F98704 /* PrivacyAndRule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyAndRule.storyboard; sourceTree = "<group>"; };
+		CE951D592CCADFC500F98704 /* PrivacyAndRuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndRuleController.swift; sourceTree = "<group>"; };
+		CE951D5B2CCC4CFB00F98704 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		CE951D5D2CCC4D0C00F98704 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		CE951D5F2CCC599900F98704 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		CE951D612CCC5B5200F98704 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
+		CE951D632CCD8BDF00F98704 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		CE951D652CCED3C500F98704 /* OrderCakes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderCakes.storyboard; sourceTree = "<group>"; };
+		CE951D672CCEDAB500F98704 /* OrderCakesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCakesController.swift; sourceTree = "<group>"; };
+		CE951D6B2CCEDB2600F98704 /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
+		CE951D6D2CCEDB6200F98704 /* CakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeCell.swift; sourceTree = "<group>"; };
+		CE951D752CCEDF3500F98704 /* CakeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CakeCell.xib; sourceTree = "<group>"; };
+		CE951D772CCEF65E00F98704 /* OrderPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderPlace.storyboard; sourceTree = "<group>"; };
+		CE951D792CCF040D00F98704 /* OrderPlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlaceController.swift; sourceTree = "<group>"; };
+		CE951D7B2CD02C8400F98704 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		CE951D7D2CD02D2F00F98704 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		CEA66DC52CD676C0008927EB /* BatterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BatterView.xib; sourceTree = "<group>"; };
+		CEA66DC72CD6FC88008927EB /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		CEADF2852CD242D900312C80 /* OrderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OrderModel.xcdatamodel; sourceTree = "<group>"; };
+		CEADF2872CD2519200312C80 /* MyOrders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyOrders.storyboard; sourceTree = "<group>"; };
+		CEADF2892CD2528D00312C80 /* MyOrdersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersController.swift; sourceTree = "<group>"; };
+		CEADF28B2CD252E400312C80 /* MyOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderCell.swift; sourceTree = "<group>"; };
+		CEADF28D2CD252FA00312C80 /* MyOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrderCell.xib; sourceTree = "<group>"; };
+		CEADF28F2CD2C3D100312C80 /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
+		CEADF2912CD2C92400312C80 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		CEADF2922CD2C92400312C80 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CEADF2932CD2C92400312C80 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		CEADF2942CD2C92400312C80 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		CEADF2952CD2C92400312C80 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		CEADF2962CD2C92400312C80 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CEADF2972CD2C92400312C80 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		CEADF29F2CD2CF7300312C80 /* AddRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeController.swift; sourceTree = "<group>"; };
+		CEADF2A12CD2D59800312C80 /* AddRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeCell.swift; sourceTree = "<group>"; };
+		CEADF2A32CD2D5D200312C80 /* AddRecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRecipeCell.xib; sourceTree = "<group>"; };
+		CEADF2A72CD387A900312C80 /* FeedBack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedBack.storyboard; sourceTree = "<group>"; };
+		CEADF2A92CD387D400312C80 /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
+		CEADF2AB2CD3ED9300312C80 /* FeedbackFinish.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackFinish.xib; sourceTree = "<group>"; };
+		CEADF2AD2CD3EEBA00312C80 /* BackupFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupFinishView.swift; sourceTree = "<group>"; };
+		CEADF2AF2CD4F61F00312C80 /* RecipeListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeListView.storyboard; sourceTree = "<group>"; };
+		CEADF2B12CD4F68F00312C80 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		CEADF2B32CD4FA7A00312C80 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		CEADF2B52CD4FABB00312C80 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		CEADF2B72CD50C4700312C80 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		CEADF2B92CD50D6C00312C80 /* RecipeDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetailView.storyboard; sourceTree = "<group>"; };
+		CEADF2BB2CD5729500312C80 /* AnimatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
+		CEADF2BD2CD587AD00312C80 /* ShapeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectionView.swift; sourceTree = "<group>"; };
+		CEADF2C22CD5897F00312C80 /* BatterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatterSelectionView.swift; sourceTree = "<group>"; };
+		CEADF2C42CD5899A00312C80 /* FillingSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillingSelectionView.swift; sourceTree = "<group>"; };
+		CEADF2C62CD58A0500312C80 /* CreamSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreamSelectionView.swift; sourceTree = "<group>"; };
+		CEADF2C82CD58A1C00312C80 /* SprinkleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinkleSelectionView.swift; sourceTree = "<group>"; };
+		CEADF2CA2CD58A3D00312C80 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		CEADF2CC2CD58CB500312C80 /* ShapeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShapeView.xib; sourceTree = "<group>"; };
+		CEADF2D02CD58CE000312C80 /* FillingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FillingView.xib; sourceTree = "<group>"; };
+		CEADF2D22CD58CF400312C80 /* CreamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreamView.xib; sourceTree = "<group>"; };
+		CEADF2D42CD58D1700312C80 /* SprinkleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SprinkleView.xib; sourceTree = "<group>"; };
+		CEADF2D62CD58D2E00312C80 /* SummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
+		CEADF2D82CD6355600312C80 /* AnimatedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimatedView.storyboard; sourceTree = "<group>"; };
+		CEF4FB902CD16C8A0019DDB2 /* CalendarModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModalViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE951D2F2CCAA88500F98704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4EBCB02636F6A48AF9E2B4 /* Pods_sweetCakes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53DB5A29934F774D3C2DE7D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A2089CA7776CBB589C7202D /* Pods-sweetCakes.debug.xcconfig */,
+				3491AC13AD2C353B9757E049 /* Pods-sweetCakes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BBAC7C2E9EBE89A6B2A8D549 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2554FDB85A6986726B173B43 /* Pods_sweetCakes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE951D292CCAA88500F98704 = {
+			isa = PBXGroup;
+			children = (
+				CE951D342CCAA88500F98704 /* sweetCakes */,
+				CE951D332CCAA88500F98704 /* Products */,
+				53DB5A29934F774D3C2DE7D5 /* Pods */,
+				BBAC7C2E9EBE89A6B2A8D549 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE951D332CCAA88500F98704 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE951D322CCAA88500F98704 /* sweetCakes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE951D342CCAA88500F98704 /* sweetCakes */ = {
+			isa = PBXGroup;
+			children = (
+				CE951D502CCACD6B00F98704 /* Navigations */,
+				CE951D4F2CCACD5900F98704 /* Controllers */,
+				CE951D492CCAA8E200F98704 /* Recources */,
+				CE951D352CCAA88500F98704 /* AppDelegate.swift */,
+				CE951D3E2CCAA88700F98704 /* Assets.xcassets */,
+				CE951D402CCAA88700F98704 /* LaunchScreen.storyboard */,
+				CE951D372CCAA88500F98704 /* SceneDelegate.swift */,
+				CE951D432CCAA88700F98704 /* Info.plist */,
+				CEADF2AB2CD3ED9300312C80 /* FeedbackFinish.xib */,
+				CE951D7D2CD02D2F00F98704 /* OrderCell.xib */,
+				CE951D752CCEDF3500F98704 /* CakeCell.xib */,
+				CEADF28D2CD252FA00312C80 /* MyOrderCell.xib */,
+				CEADF2A32CD2D5D200312C80 /* AddRecipeCell.xib */,
+				CE951D4D2CCAABEE00F98704 /* PreviewWindow.storyboard */,
+				CE951D572CCADFB000F98704 /* PrivacyAndRule.storyboard */,
+				CE951D5B2CCC4CFB00F98704 /* Onboarding.storyboard */,
+				CE951D612CCC5B5200F98704 /* MainScreen.storyboard */,
+				CE951D652CCED3C500F98704 /* OrderCakes.storyboard */,
+				CE951D772CCEF65E00F98704 /* OrderPlace.storyboard */,
+				CEADF2872CD2519200312C80 /* MyOrders.storyboard */,
+				CEADF2A72CD387A900312C80 /* FeedBack.storyboard */,
+				CEADF2AF2CD4F61F00312C80 /* RecipeListView.storyboard */,
+				CEADF28F2CD2C3D100312C80 /* AddRecipe.storyboard */,
+				CEADF2842CD242D900312C80 /* OrderModel.xcdatamodeld */,
+				CEADF2B32CD4FA7A00312C80 /* RecipeCell.xib */,
+				CEADF2B92CD50D6C00312C80 /* RecipeDetailView.storyboard */,
+				CEADF2CC2CD58CB500312C80 /* ShapeView.xib */,
+				CEA66DC52CD676C0008927EB /* BatterView.xib */,
+				CEADF2D02CD58CE000312C80 /* FillingView.xib */,
+				CEADF2D22CD58CF400312C80 /* CreamView.xib */,
+				CEADF2D42CD58D1700312C80 /* SprinkleView.xib */,
+				CEADF2D62CD58D2E00312C80 /* SummaryView.xib */,
+				CEADF2D82CD6355600312C80 /* AnimatedView.storyboard */,
+			);
+			path = sweetCakes;
+			sourceTree = "<group>";
+		};
+		CE951D492CCAA8E200F98704 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				CEADF2BF2CD5892B00312C80 /* Views */,
+				CE951D6A2CCEDB1400F98704 /* Models */,
+				CE951D692CCEDAFE00F98704 /* Cells */,
+				CE951D4A2CCAA8F400F98704 /* Fonts */,
+				CE951D632CCD8BDF00F98704 /* UIColor + Extension.swift */,
+			);
+			name = Recources;
+			sourceTree = "<group>";
+		};
+		CE951D4A2CCAA8F400F98704 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEADF2942CD2C92400312C80 /* Manrope-Bold.ttf */,
+				CEADF2962CD2C92400312C80 /* Manrope-ExtraBold.ttf */,
+				CEADF2922CD2C92400312C80 /* Manrope-ExtraLight.ttf */,
+				CEADF2972CD2C92400312C80 /* Manrope-Light.ttf */,
+				CEADF2952CD2C92400312C80 /* Manrope-Medium.ttf */,
+				CEADF2912CD2C92400312C80 /* Manrope-Regular.ttf */,
+				CEADF2932CD2C92400312C80 /* Manrope-SemiBold.ttf */,
+				CE951D4B2CCAAA8800F98704 /* Digitalt.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE951D4F2CCACD5900F98704 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE951D512CCACD9A00F98704 /* PrevieController.swift */,
+				CE951D592CCADFC500F98704 /* PrivacyAndRuleController.swift */,
+				CE951D5D2CCC4D0C00F98704 /* OnboardingController.swift */,
+				CE951D5F2CCC599900F98704 /* MainScreenController.swift */,
+				CE951D672CCEDAB500F98704 /* OrderCakesController.swift */,
+				CE951D792CCF040D00F98704 /* OrderPlaceController.swift */,
+				CEF4FB902CD16C8A0019DDB2 /* CalendarModalViewController.swift */,
+				CEADF2892CD2528D00312C80 /* MyOrdersController.swift */,
+				CEADF29F2CD2CF7300312C80 /* AddRecipeController.swift */,
+				CEADF2A92CD387D400312C80 /* FeedbackController.swift */,
+				CEADF2B12CD4F68F00312C80 /* RecipeListViewController.swift */,
+				CEADF2B72CD50C4700312C80 /* RecipeDetailViewController.swift */,
+				CEADF2BB2CD5729500312C80 /* AnimatedViewController.swift */,
+				CEA66DC72CD6FC88008927EB /* QRScannerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE951D502CCACD6B00F98704 /* Navigations */ = {
+			isa = PBXGroup;
+			children = (
+				CE951D532CCAD04D00F98704 /* Coordinator.swift */,
+				CE951D552CCAD05E00F98704 /* AppCoordinator.swift */,
+			);
+			name = Navigations;
+			sourceTree = "<group>";
+		};
+		CE951D692CCEDAFE00F98704 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE951D6D2CCEDB6200F98704 /* CakeCell.swift */,
+				CE951D7B2CD02C8400F98704 /* OrderCell.swift */,
+				CEADF28B2CD252E400312C80 /* MyOrderCell.swift */,
+				CEADF2A12CD2D59800312C80 /* AddRecipeCell.swift */,
+				CEADF2B52CD4FABB00312C80 /* RecipeCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		CE951D6A2CCEDB1400F98704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE951D6B2CCEDB2600F98704 /* Cake.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CEADF2BF2CD5892B00312C80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEADF2AD2CD3EEBA00312C80 /* BackupFinishView.swift */,
+				CEADF2BD2CD587AD00312C80 /* ShapeSelectionView.swift */,
+				CEADF2C22CD5897F00312C80 /* BatterSelectionView.swift */,
+				CEADF2C42CD5899A00312C80 /* FillingSelectionView.swift */,
+				CEADF2C62CD58A0500312C80 /* CreamSelectionView.swift */,
+				CEADF2C82CD58A1C00312C80 /* SprinkleSelectionView.swift */,
+				CEADF2CA2CD58A3D00312C80 /* SummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE951D312CCAA88500F98704 /* sweetCakes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE951D462CCAA88700F98704 /* Build configuration list for PBXNativeTarget "sweetCakes" */;
+			buildPhases = (
+				5CA46A7DEBA9E5269F842D26 /* [CP] Check Pods Manifest.lock */,
+				CE951D2E2CCAA88500F98704 /* Sources */,
+				CE951D2F2CCAA88500F98704 /* Frameworks */,
+				CE951D302CCAA88500F98704 /* Resources */,
+				01BA65931BF77194F010B88B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sweetCakes;
+			productName = sweetCakes;
+			productReference = CE951D322CCAA88500F98704 /* sweetCakes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE951D2A2CCAA88500F98704 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					CE951D312CCAA88500F98704 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = CE951D2D2CCAA88500F98704 /* Build configuration list for PBXProject "sweetCakes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE951D292CCAA88500F98704;
+			productRefGroup = CE951D332CCAA88500F98704 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE951D312CCAA88500F98704 /* sweetCakes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE951D302CCAA88500F98704 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE951D422CCAA88700F98704 /* LaunchScreen.storyboard in Resources */,
+				CEADF2B42CD4FA7A00312C80 /* RecipeCell.xib in Resources */,
+				CEADF2CD2CD58CB500312C80 /* ShapeView.xib in Resources */,
+				CEADF2B02CD4F61F00312C80 /* RecipeListView.storyboard in Resources */,
+				CEADF2D52CD58D1700312C80 /* SprinkleView.xib in Resources */,
+				CE951D4E2CCAABEE00F98704 /* PreviewWindow.storyboard in Resources */,
+				CE951D3F2CCAA88700F98704 /* Assets.xcassets in Resources */,
+				CEADF2882CD2519200312C80 /* MyOrders.storyboard in Resources */,
+				CEA66DC62CD676C0008927EB /* BatterView.xib in Resources */,
+				CEADF29A2CD2C92400312C80 /* Manrope-SemiBold.ttf in Resources */,
+				CEADF29D2CD2C92400312C80 /* Manrope-ExtraBold.ttf in Resources */,
+				CEADF2D92CD6355600312C80 /* AnimatedView.storyboard in Resources */,
+				CE951D762CCEDF3500F98704 /* CakeCell.xib in Resources */,
+				CE951D5C2CCC4CFB00F98704 /* Onboarding.storyboard in Resources */,
+				CE951D582CCADFB000F98704 /* PrivacyAndRule.storyboard in Resources */,
+				CEADF29C2CD2C92400312C80 /* Manrope-Medium.ttf in Resources */,
+				CE951D4C2CCAAA8C00F98704 /* Digitalt.ttf in Resources */,
+				CE951D782CCEF65E00F98704 /* OrderPlace.storyboard in Resources */,
+				CEADF2BA2CD50D6C00312C80 /* RecipeDetailView.storyboard in Resources */,
+				CEADF2D32CD58CF400312C80 /* CreamView.xib in Resources */,
+				CE951D622CCC5B5200F98704 /* MainScreen.storyboard in Resources */,
+				CEADF2D12CD58CE000312C80 /* FillingView.xib in Resources */,
+				CE951D662CCED3C500F98704 /* OrderCakes.storyboard in Resources */,
+				CEADF2982CD2C92400312C80 /* Manrope-Regular.ttf in Resources */,
+				CEADF28E2CD252FA00312C80 /* MyOrderCell.xib in Resources */,
+				CEADF2A82CD387A900312C80 /* FeedBack.storyboard in Resources */,
+				CEADF2AC2CD3ED9300312C80 /* FeedbackFinish.xib in Resources */,
+				CEADF2D72CD58D2E00312C80 /* SummaryView.xib in Resources */,
+				CEADF29E2CD2C92400312C80 /* Manrope-Light.ttf in Resources */,
+				CEADF2992CD2C92400312C80 /* Manrope-ExtraLight.ttf in Resources */,
+				CEADF2902CD2C3D100312C80 /* AddRecipe.storyboard in Resources */,
+				CEADF2A42CD2D5D200312C80 /* AddRecipeCell.xib in Resources */,
+				CEADF29B2CD2C92400312C80 /* Manrope-Bold.ttf in Resources */,
+				CE951D7E2CD02D2F00F98704 /* OrderCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01BA65931BF77194F010B88B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sweetCakes/Pods-sweetCakes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sweetCakes/Pods-sweetCakes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sweetCakes/Pods-sweetCakes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA46A7DEBA9E5269F842D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sweetCakes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE951D2E2CCAA88500F98704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEADF2C92CD58A1C00312C80 /* SprinkleSelectionView.swift in Sources */,
+				CE951D7A2CCF040D00F98704 /* OrderPlaceController.swift in Sources */,
+				CE951D642CCD8BDF00F98704 /* UIColor + Extension.swift in Sources */,
+				CEADF28A2CD2528D00312C80 /* MyOrdersController.swift in Sources */,
+				CEADF2B62CD4FABB00312C80 /* RecipeCell.swift in Sources */,
+				CEADF2C72CD58A0500312C80 /* CreamSelectionView.swift in Sources */,
+				CEADF2B22CD4F68F00312C80 /* RecipeListViewController.swift in Sources */,
+				CEADF2A02CD2CF7300312C80 /* AddRecipeController.swift in Sources */,
+				CE951D7C2CD02C8400F98704 /* OrderCell.swift in Sources */,
+				CEADF2BC2CD5729500312C80 /* AnimatedViewController.swift in Sources */,
+				CE951D542CCAD04D00F98704 /* Coordinator.swift in Sources */,
+				CE951D362CCAA88500F98704 /* AppDelegate.swift in Sources */,
+				CEADF2A22CD2D59800312C80 /* AddRecipeCell.swift in Sources */,
+				CEF4FB912CD16C8A0019DDB2 /* CalendarModalViewController.swift in Sources */,
+				CE951D562CCAD05E00F98704 /* AppCoordinator.swift in Sources */,
+				CEADF2BE2CD587AD00312C80 /* ShapeSelectionView.swift in Sources */,
+				CE951D682CCEDAB500F98704 /* OrderCakesController.swift in Sources */,
+				CE951D6E2CCEDB6200F98704 /* CakeCell.swift in Sources */,
+				CE951D6C2CCEDB2600F98704 /* Cake.swift in Sources */,
+				CE951D5E2CCC4D0C00F98704 /* OnboardingController.swift in Sources */,
+				CEADF2C52CD5899A00312C80 /* FillingSelectionView.swift in Sources */,
+				CEADF2CB2CD58A3D00312C80 /* SummaryView.swift in Sources */,
+				CEADF2AA2CD387D400312C80 /* FeedbackController.swift in Sources */,
+				CEA66DC82CD6FC88008927EB /* QRScannerViewController.swift in Sources */,
+				CEADF2C32CD5897F00312C80 /* BatterSelectionView.swift in Sources */,
+				CE951D522CCACD9A00F98704 /* PrevieController.swift in Sources */,
+				CEADF2B82CD50C4700312C80 /* RecipeDetailViewController.swift in Sources */,
+				CEADF2862CD242D900312C80 /* OrderModel.xcdatamodeld in Sources */,
+				CE951D5A2CCADFC500F98704 /* PrivacyAndRuleController.swift in Sources */,
+				CE951D602CCC599900F98704 /* MainScreenController.swift in Sources */,
+				CEADF2AE2CD3EEBA00312C80 /* BackupFinishView.swift in Sources */,
+				CEADF28C2CD252E400312C80 /* MyOrderCell.swift in Sources */,
+				CE951D382CCAA88500F98704 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE951D402CCAA88700F98704 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE951D412CCAA88700F98704 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE951D442CCAA88700F98704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE951D452CCAA88700F98704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE951D472CCAA88700F98704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2089CA7776CBB589C7202D /* Pods-sweetCakes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VJW59HMWYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sweetCakes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sweetCakes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE951D482CCAA88700F98704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3491AC13AD2C353B9757E049 /* Pods-sweetCakes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sweetCakes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sweetCakes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE951D2D2CCAA88500F98704 /* Build configuration list for PBXProject "sweetCakes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE951D442CCAA88700F98704 /* Debug */,
+				CE951D452CCAA88700F98704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE951D462CCAA88700F98704 /* Build configuration list for PBXNativeTarget "sweetCakes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE951D472CCAA88700F98704 /* Debug */,
+				CE951D482CCAA88700F98704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEADF2842CD242D900312C80 /* OrderModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEADF2852CD242D900312C80 /* OrderModel.xcdatamodel */,
+			);
+			currentVersion = CEADF2852CD242D900312C80 /* OrderModel.xcdatamodel */;
+			path = OrderModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE951D2A2CCAA88500F98704 /* Project object */;
+}

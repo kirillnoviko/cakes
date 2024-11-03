@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Digitalt.ttf">
+            <string>Digitalt</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="SprinkleSelectionView" id="HTa-Dp-R9i" customClass="SprinkleSelectionView" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Qb-5b-Hqe">
+                    <rect key="frame" x="33.5" y="70" width="308" height="66.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundText" translatesAutoresizingMaskIntoConstraints="NO" id="1iw-Wx-XF4">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="66.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's pick out the cream for brownie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCL-ZG-v7B">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="66.5"/>
+                            <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1iw-Wx-XF4" secondAttribute="trailing" id="0c4-9k-Egb"/>
+                        <constraint firstAttribute="bottom" secondItem="1iw-Wx-XF4" secondAttribute="bottom" id="2RS-Dy-H3t"/>
+                        <constraint firstItem="1iw-Wx-XF4" firstAttribute="leading" secondItem="7Qb-5b-Hqe" secondAttribute="leading" id="8zT-Yn-3Jb"/>
+                        <constraint firstAttribute="bottom" secondItem="lCL-ZG-v7B" secondAttribute="bottom" id="ENI-vp-4hc"/>
+                        <constraint firstAttribute="bottom" secondItem="1iw-Wx-XF4" secondAttribute="bottom" id="EbZ-kf-6KV"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="308" id="Fxy-Gp-kOr"/>
+                        <constraint firstAttribute="width" constant="308" id="HtH-J5-HT9"/>
+                        <constraint firstItem="lCL-ZG-v7B" firstAttribute="top" secondItem="7Qb-5b-Hqe" secondAttribute="top" id="SyP-bS-Yq0"/>
+                        <constraint firstAttribute="trailing" secondItem="lCL-ZG-v7B" secondAttribute="trailing" id="Yva-Ml-EC1"/>
+                        <constraint firstItem="lCL-ZG-v7B" firstAttribute="leading" secondItem="7Qb-5b-Hqe" secondAttribute="leading" id="beV-Xc-AtP"/>
+                        <constraint firstItem="1iw-Wx-XF4" firstAttribute="top" secondItem="7Qb-5b-Hqe" secondAttribute="top" id="j7a-eU-T3r"/>
+                        <constraint firstItem="1iw-Wx-XF4" firstAttribute="top" secondItem="7Qb-5b-Hqe" secondAttribute="top" id="l9Q-pc-5Gl"/>
+                        <constraint firstItem="1iw-Wx-XF4" firstAttribute="leading" secondItem="7Qb-5b-Hqe" secondAttribute="leading" id="pkR-lg-vQu"/>
+                        <constraint firstAttribute="trailing" secondItem="1iw-Wx-XF4" secondAttribute="trailing" id="unq-O4-pZV"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UX4-65-Y2P">
+                    <rect key="frame" x="33.5" y="166.5" width="308" height="440.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cvK-3P-3aT">
+                            <rect key="frame" x="0.0" y="0.0" width="153.5" height="440.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuM-hI-Bip">
+                                    <rect key="frame" x="0.0" y="0.0" width="153.5" height="143.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background" image="cakeSprinkle1" imageContentMode="scaleAspectFit"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="SprinkleButtonTapped:" destination="HTa-Dp-R9i" eventType="touchUpInside" id="ux3-wN-Ym1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-Vw-CfM">
+                                    <rect key="frame" x="0.0" y="148.5" width="153.5" height="143.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background" image="cakeSprinkle3" imageContentMode="scaleAspectFit"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="SprinkleButtonTapped:" destination="HTa-Dp-R9i" eventType="touchUpInside" id="CqN-QV-ZZ0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGW-9V-hX1">
+                                    <rect key="frame" x="0.0" y="297" width="153.5" height="143.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background" image="cakeSprinkle5" imageContentMode="scaleAspectFit"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="SprinkleButtonTapped:" destination="HTa-Dp-R9i" eventType="touchUpInside" id="6g4-gX-5Ny"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pSz-Ne-cnO">
+                            <rect key="frame" x="154.5" y="0.0" width="153.5" height="440.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDS-lt-VYs">
+                                    <rect key="frame" x="0.0" y="0.0" width="153.5" height="143.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background" image="cakeSprinkle4" imageContentMode="scaleAspectFit"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="SprinkleButtonTapped:" destination="HTa-Dp-R9i" eventType="touchUpInside" id="fFE-9Q-W8R"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-le-ChF">
+                                    <rect key="frame" x="0.0" y="148.5" width="153.5" height="143.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <backgroundConfiguration key="background" image="cakeSprinkle6" imageContentMode="scaleAspectFit"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="SprinkleButtonTapped:" destination="HTa-Dp-R9i" eventType="touchUpInside" id="KzZ-zS-hrU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbr-B2-ZtC">
+                                    <rect key="frame" x="0.0" y="297" width="153.5" height="143.5"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background" image="cakeSprinkle2" imageContentMode="scaleAspectFit"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="SprinkleButtonTapped:" destination="HTa-Dp-R9i" eventType="touchUpInside" id="7kr-ix-Epv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="308" id="p9C-hd-3C6"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="2z5-E0-87A"/>
+            <constraints>
+                <constraint firstItem="UX4-65-Y2P" firstAttribute="top" secondItem="7Qb-5b-Hqe" secondAttribute="bottom" constant="30" id="35V-wK-7Om"/>
+                <constraint firstItem="UX4-65-Y2P" firstAttribute="height" secondItem="HTa-Dp-R9i" secondAttribute="height" multiplier="0.66" id="ByQ-RM-94a"/>
+                <constraint firstItem="7Qb-5b-Hqe" firstAttribute="centerX" secondItem="HTa-Dp-R9i" secondAttribute="centerX" id="YdG-rX-qod"/>
+                <constraint firstItem="7Qb-5b-Hqe" firstAttribute="height" secondItem="HTa-Dp-R9i" secondAttribute="height" multiplier="0.1" id="Zpc-qK-TZh"/>
+                <constraint firstItem="7Qb-5b-Hqe" firstAttribute="top" secondItem="2z5-E0-87A" secondAttribute="top" constant="50" id="f4B-GK-pV7"/>
+                <constraint firstItem="UX4-65-Y2P" firstAttribute="centerX" secondItem="HTa-Dp-R9i" secondAttribute="centerX" id="xsP-39-DS7"/>
+            </constraints>
+            <connections>
+                <outlet property="cake1" destination="KuM-hI-Bip" id="2PI-gU-Tqb"/>
+                <outlet property="cake2" destination="hXz-Vw-CfM" id="2wh-g7-tDT"/>
+                <outlet property="cake3" destination="XGW-9V-hX1" id="4FH-wG-ri1"/>
+                <outlet property="cake4" destination="ZDS-lt-VYs" id="3Ve-Zi-Koe"/>
+                <outlet property="cake5" destination="PH5-le-ChF" id="5uq-XG-CmB"/>
+                <outlet property="cake6" destination="Xbr-B2-ZtC" id="sGP-Yj-bLd"/>
+            </connections>
+            <point key="canvasLocation" x="142.74809160305344" y="45.774647887323944"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundText" width="308" height="136"/>
+        <image name="cakeSprinkle1" width="155" height="159"/>
+        <image name="cakeSprinkle2" width="155" height="159"/>
+        <image name="cakeSprinkle3" width="155" height="159"/>
+        <image name="cakeSprinkle4" width="155" height="159"/>
+        <image name="cakeSprinkle5" width="155" height="159"/>
+        <image name="cakeSprinkle6" width="155" height="159"/>
+    </resources>
+</document>

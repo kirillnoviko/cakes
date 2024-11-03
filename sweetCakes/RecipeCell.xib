@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Manrope-ExtraBold.ttf">
+            <string>Manrope-ExtraBold</string>
+        </array>
+        <array key="Manrope-SemiBold.ttf">
+            <string>Manrope-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="RecipeCell" reuseIdentifier="RecipeCell" id="MPS-E7-2io" customClass="RecipeCell" customModule="sweetCakes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dBV-z5-UzF">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-RP-bYA">
+                        <rect key="frame" x="142" y="24" width="175" height="134.33333333333334"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVR-Dv-cb1">
+                                <rect key="frame" x="0.0" y="0.0" width="175" height="32"/>
+                                <fontDescription key="fontDescription" name="Manrope-ExtraBold" family="Manrope" pointSize="16"/>
+                                <color key="textColor" red="0.91722756620000001" green="0.25784010369999999" blue="0.86655207710000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCZ-Ta-t4x">
+                                <rect key="frame" x="0.0" y="39.999999999999993" width="175" height="94.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Manrope-SemiBold" family="Manrope" pointSize="14"/>
+                                <color key="textColor" red="0.91722756620000001" green="0.25784010369999999" blue="0.86655207710000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sCZ-Ta-t4x" firstAttribute="height" secondItem="9gh-RP-bYA" secondAttribute="height" multiplier="0.7" id="Q1r-G1-aAr"/>
+                        </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-fV-mPZ">
+                        <rect key="frame" x="10" y="25.666666666666671" width="127" height="131"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LVb-j5-hiF">
+                                <rect key="frame" x="0.0" y="0.0" width="127" height="131"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LVb-j5-hiF" firstAttribute="leading" secondItem="xIp-fV-mPZ" secondAttribute="leading" id="3rL-aJ-7jI"/>
+                            <constraint firstAttribute="bottom" secondItem="LVb-j5-hiF" secondAttribute="bottom" id="QYj-S3-GAc"/>
+                            <constraint firstAttribute="width" secondItem="xIp-fV-mPZ" secondAttribute="height" multiplier="127:131" id="Qwq-4x-bab"/>
+                            <constraint firstAttribute="trailing" secondItem="LVb-j5-hiF" secondAttribute="trailing" id="c1i-YQ-w2f"/>
+                            <constraint firstItem="LVb-j5-hiF" firstAttribute="top" secondItem="xIp-fV-mPZ" secondAttribute="top" id="dJs-Xp-bzm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="xIp-fV-mPZ" firstAttribute="width" secondItem="dBV-z5-UzF" secondAttribute="width" multiplier="0.381381" id="7R9-TY-Kge"/>
+                    <constraint firstItem="9gh-RP-bYA" firstAttribute="leading" secondItem="xIp-fV-mPZ" secondAttribute="trailing" constant="5" id="JI6-1X-WOw"/>
+                    <constraint firstItem="xIp-fV-mPZ" firstAttribute="leading" secondItem="dBV-z5-UzF" secondAttribute="leading" constant="10" id="LYU-0q-rAz"/>
+                    <constraint firstItem="xIp-fV-mPZ" firstAttribute="height" secondItem="dBV-z5-UzF" secondAttribute="height" multiplier="0.71978" id="OW7-Zb-xSh"/>
+                    <constraint firstItem="xIp-fV-mPZ" firstAttribute="centerY" secondItem="dBV-z5-UzF" secondAttribute="centerY" id="ThH-VL-0Vz"/>
+                    <constraint firstAttribute="trailing" secondItem="9gh-RP-bYA" secondAttribute="trailing" constant="16" id="aS1-Vw-r26"/>
+                    <constraint firstItem="9gh-RP-bYA" firstAttribute="height" secondItem="dBV-z5-UzF" secondAttribute="height" multiplier="0.738095" id="uEi-nN-Qhy"/>
+                    <constraint firstItem="9gh-RP-bYA" firstAttribute="centerY" secondItem="dBV-z5-UzF" secondAttribute="centerY" id="vHy-s1-YgS"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="333" height="182"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="sCZ-Ta-t4x" id="MCb-mf-a4d"/>
+                <outlet property="thumbnailImageView" destination="LVb-j5-hiF" id="qC1-7Q-IGw"/>
+                <outlet property="titleLabel" destination="qVR-Dv-cb1" id="HyB-b8-t4B"/>
+                <outlet property="viewImage" destination="xIp-fV-mPZ" id="azw-BH-TKl"/>
+            </connections>
+            <point key="canvasLocation" x="249.61832061068702" y="-53.521126760563384"/>
+        </collectionViewCell>
+    </objects>
+</document>
