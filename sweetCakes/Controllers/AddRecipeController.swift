@@ -45,6 +45,10 @@ class AddRecipeController: UIViewController, UICollectionViewDelegate, UICollect
           let nib = UINib(nibName: "AddRecipeCell", bundle: nil)
           collectionView.register(nib, forCellWithReuseIdentifier: "AddRecipeCell")
           collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        let layout = UICollectionViewFlowLayout()
+           layout.scrollDirection = .horizontal 
+           collectionView.collectionViewLayout = layout
       }
     
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
