@@ -194,11 +194,11 @@
                                             <action selector="switchToSecondView:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MzO-3l-G4T"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Ypp-gM-EYm">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ypp-gM-EYm">
                                         <rect key="frame" x="25.666666666666657" y="616" width="342" height="28"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYa-iE-ank">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="28"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYa-iE-ank">
+                                                <rect key="frame" x="0.0" y="0.0" width="342" height="28"/>
                                                 <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="16"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="•  privacy policy">
@@ -208,21 +208,9 @@
                                                     <action selector="openPrivacyPolicy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ln9-hj-YAn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6U-JC-uGX">
-                                                <rect key="frame" x="241" y="0.0" width="101" height="28"/>
-                                                <fontDescription key="fontDescription" name="Digitalt" family="Digitalt" pointSize="16"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="•  rules of use">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="openRules:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lw4-ec-nbW"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="342" id="pzy-7s-3Bt"/>
-                                            <constraint firstAttribute="width" constant="342" id="vEt-A3-zp8"/>
+                                            <constraint firstAttribute="width" constant="342" id="QEs-Aq-jiZ"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="M7Y-Qf-ntn">
@@ -312,7 +300,6 @@
                     <connections>
                         <outlet property="buttonBack" destination="0IT-4a-lb8" id="tXf-zJ-rye"/>
                         <outlet property="buttonLeft" destination="AYa-iE-ank" id="vwy-Z0-jJU"/>
-                        <outlet property="buttonRight" destination="E6U-JC-uGX" id="PCx-Iu-GEV"/>
                         <outlet property="containerView" destination="c9E-Yy-ORG" id="UPD-M2-JyJ"/>
                         <outlet property="emailTextField" destination="pBw-IQ-fn3" id="ysl-pc-dnF"/>
                         <outlet property="messageTextField" destination="hUI-05-sFn" id="OYC-bp-8pJ"/>

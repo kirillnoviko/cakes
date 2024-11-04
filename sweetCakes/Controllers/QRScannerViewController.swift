@@ -119,7 +119,9 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     private func showError() {
         let alert = UIAlertController(title: "Error", message: "Failed to set up camera to scan QR codes", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.dismiss(animated: true, completion: nil)
+            if let navigationController = self.navigationController {
+                navigationController.popToRootViewController(animated: true)
+            }
         }))
         present(alert, animated: true)
         captureSession = nil

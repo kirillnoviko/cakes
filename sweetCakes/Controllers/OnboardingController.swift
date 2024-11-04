@@ -30,7 +30,7 @@ class OnboardingController: UIViewController {
     
     
     private func setupNavigationBar() {
-        labelTitle.text = "Aboute Kate"
+        labelTitle.text = "About Kate"
         labelSkip.isHidden = true
         buttonBack.isHidden = false
     }

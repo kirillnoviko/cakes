@@ -26,16 +26,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-RP-bYA">
-                        <rect key="frame" x="142" y="24" width="175" height="134.33333333333334"/>
+                        <rect key="frame" x="274.33333333333331" y="47.333333333333343" width="42.666666666666686" height="265.66666666666663"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVR-Dv-cb1">
-                                <rect key="frame" x="0.0" y="0.0" width="175" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="71.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Manrope-ExtraBold" family="Manrope" pointSize="16"/>
                                 <color key="textColor" red="0.91722756620000001" green="0.25784010369999999" blue="0.86655207710000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCZ-Ta-t4x">
-                                <rect key="frame" x="0.0" y="39.999999999999993" width="175" height="94.333333333333314"/>
+                                <rect key="frame" x="0.0" y="79.666666666666657" width="42.666666666666664" height="185.99999999999997"/>
                                 <fontDescription key="fontDescription" name="Manrope-SemiBold" family="Manrope" pointSize="14"/>
                                 <color key="textColor" red="0.91722756620000001" green="0.25784010369999999" blue="0.86655207710000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -46,10 +46,10 @@
                         </constraints>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-fV-mPZ">
-                        <rect key="frame" x="10" y="25.666666666666671" width="127" height="131"/>
+                        <rect key="frame" x="10" y="50.333333333333343" width="259.33333333333331" height="259.33333333333326"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LVb-j5-hiF">
-                                <rect key="frame" x="0.0" y="0.0" width="127" height="131"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LVb-j5-hiF">
+                                <rect key="frame" x="0.0" y="0.0" width="259.33333333333331" height="259.33333333333331"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -57,7 +57,7 @@
                         <constraints>
                             <constraint firstItem="LVb-j5-hiF" firstAttribute="leading" secondItem="xIp-fV-mPZ" secondAttribute="leading" id="3rL-aJ-7jI"/>
                             <constraint firstAttribute="bottom" secondItem="LVb-j5-hiF" secondAttribute="bottom" id="QYj-S3-GAc"/>
-                            <constraint firstAttribute="width" secondItem="xIp-fV-mPZ" secondAttribute="height" multiplier="127:131" id="Qwq-4x-bab"/>
+                            <constraint firstAttribute="width" secondItem="xIp-fV-mPZ" secondAttribute="height" multiplier="1:1" id="Qwq-4x-bab"/>
                             <constraint firstAttribute="trailing" secondItem="LVb-j5-hiF" secondAttribute="trailing" id="c1i-YQ-w2f"/>
                             <constraint firstItem="LVb-j5-hiF" firstAttribute="top" secondItem="xIp-fV-mPZ" secondAttribute="top" id="dJs-Xp-bzm"/>
                         </constraints>

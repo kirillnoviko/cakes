@@ -4,7 +4,7 @@ import SafariServices
 class FeedbackController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var coordinator: AppCoordinator?
     @IBOutlet weak var buttonLeft: UIButton!
-    @IBOutlet weak var buttonRight: UIButton!
+   
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var buttonBack: UIButton!
     
@@ -18,7 +18,7 @@ class FeedbackController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         super.viewDidLoad()
         
         setupShadow(for: buttonLeft)
-        setupShadow(for: buttonRight)
+        
         nameTextField.delegate = self
         emailTextField.delegate = self
         surnameTextField.delegate = self
@@ -28,11 +28,9 @@ class FeedbackController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    @IBAction func openRules(_ sender: Any) {
-        openSafari(with: "https://www.google.com")
-    }
+  
     @IBAction func openPrivacyPolicy(_ sender: Any) {
-        openSafari(with: "https://www.vk.com")
+        openSafari(with: "https://docs.google.com/document/d/17CRDUcZhES2HrWrQHs3vJ69Unky20GUNMrZ3Il7Z6OM/edit?usp=sharing")
     }
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
