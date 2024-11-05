@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Sweet Cakes - Kate.png",
+      "filename" : "Nine Cakes.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Sweet Cakes - Kate@2x.png",
+      "filename" : "Nine Cakes@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Sweet Cakes - Kate@3x.png",
+      "filename" : "Nine Cakes@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
