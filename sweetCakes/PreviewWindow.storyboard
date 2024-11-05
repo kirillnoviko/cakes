@@ -71,7 +71,7 @@
     <resources>
         <image name="background" width="390" height="844"/>
         <image name="circle" width="69" height="60.666667938232422"/>
-        <image name="textPreview" width="360" height="453.33334350585938"/>
+        <image name="textPreview" width="342.33334350585938" height="245"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
